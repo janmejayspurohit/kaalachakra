@@ -23,6 +23,9 @@ async function req(path, options = {}) {
   let body;
   try { body = text ? JSON.parse(text) : null; } catch { body = { error: text }; }
   if (!res.ok) {
+    // A lapsed or revoked session anywhere in the app returns the user to the
+    // sign-in screen; the auth routes report their own errors.
+    if (res.status === 401 && !path.startsWith('/auth/')) window.dispatchEvent(new Event('kc:unauthorized'));
     // The API returns either {error} or {error, details} from Ajv. Surface the
     // first validation message, which names the offending field.
     const detail = body?.details?.[0];
@@ -116,4 +119,35 @@ export const api = {
   chaturmasya: (year, place, calc = {}) => req(`/chaturmasya?${qs({ year, ...placeQuery(place), ...calcQuery(calc) })}`),
   aradhana: (year, place, calc = {}) => req(`/aradhana?${qs({ year, ...placeQuery(place), ...calcQuery(calc) })}`),
   month: (year, month, place, calc = {}) => req(`/month?${qs({ year, month, ...placeQuery(place), ...calcQuery(calc) })}`),
+};
+
+/** Sign-in, password and two-factor routes (docs/ACCOUNTS.md). */
+export const authApi = {
+  me: () => req('/auth/me'),
+  login: (email, password) => req('/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) }),
+  totp: (code) => req('/auth/totp', { method: 'POST', body: JSON.stringify({ code }) }),
+  logout: () => req('/auth/logout', { method: 'POST' }),
+  changePassword: (currentPassword, newPassword) =>
+    req('/auth/password', { method: 'POST', body: JSON.stringify({ currentPassword, newPassword }) }),
+  totpSetup: () => req('/auth/totp/setup', { method: 'POST' }),
+  totpEnable: (code) => req('/auth/totp/enable', { method: 'POST', body: JSON.stringify({ code }) }),
+  totpDisable: (password, code) => req('/auth/totp/disable', { method: 'POST', body: JSON.stringify({ password, code }) }),
+};
+
+/** Admin only: accounts. */
+export const adminApi = {
+  users: () => req('/admin/users'),
+  createUser: (email, role) => req('/admin/users', { method: 'POST', body: JSON.stringify({ email, role }) }),
+  resetPassword: (id) => req(`/admin/users/${encodeURIComponent(id)}/reset-password`, { method: 'POST' }),
+  resetTotp: (id) => req(`/admin/users/${encodeURIComponent(id)}/reset-totp`, { method: 'POST' }),
+  deleteUser: (id) => req(`/admin/users/${encodeURIComponent(id)}`, { method: 'DELETE' }),
+};
+
+/** A profile owner's sharing controls. */
+export const sharesApi = {
+  list: (profileId) => req(`/profiles/${encodeURIComponent(profileId)}/shares`),
+  add: (profileId, email, permission) =>
+    req(`/profiles/${encodeURIComponent(profileId)}/shares`, { method: 'POST', body: JSON.stringify({ email, permission }) }),
+  remove: (profileId, userId) =>
+    req(`/profiles/${encodeURIComponent(profileId)}/shares/${encodeURIComponent(userId)}`, { method: 'DELETE' }),
 };

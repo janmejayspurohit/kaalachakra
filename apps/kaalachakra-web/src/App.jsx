@@ -15,6 +15,9 @@ import DateField from './components/DateField.jsx';
 import Settings from './components/Settings.jsx';
 import { Terms, Privacy } from './components/Legal.jsx';
 import { useSettings, useDateFormat } from './settings.jsx';
+import { useAuth } from './auth.jsx';
+import Account from './components/Account.jsx';
+import Users from './components/Users.jsx';
 
 const TABS = [
   ['panchanga', 'Panchanga'],
@@ -23,7 +26,10 @@ const TABS = [
   ['matching', 'Matrimony'],
   ['profiles', 'Profiles'],
   ['settings', 'Settings'],
+  ['account', 'Account'],
 ];
+/** Shown only to admins; a non-admin opening #users sees a refusal. */
+const ADMIN_TABS = [['users', 'Users']];
 
 /**
  * Today AT THE SELECTED PLACE, not in the browser's timezone.
@@ -58,13 +64,16 @@ const todayAt = (place) => {
  * here in the first place.
  */
 const FOOTER_ROUTES = ['terms', 'privacy'];
-const VALID = new Set([...TABS.map(([k]) => k), ...FOOTER_ROUTES]);
+const VALID = new Set([...TABS.map(([k]) => k), ...ADMIN_TABS.map(([k]) => k), ...FOOTER_ROUTES]);
 const tabFromHash = () => {
   const h = window.location.hash.replace('#', '');
   return VALID.has(h) ? h : 'panchanga';
 };
 
 export default function App() {
+  const { user, logout } = useAuth();
+  const isAdmin = user?.role === 'admin';
+  const visibleTabs = isAdmin ? [...TABS, ...ADMIN_TABS] : TABS;
   // Hash routing rather than a router dependency: it keeps tabs deep-linkable
   // and survives a reload, which is all this app needs.
   const [tab, setTabState] = useState(tabFromHash);
@@ -143,10 +152,11 @@ export default function App() {
           </button>
           <Clock />
           <nav className="tabs">
-            {TABS.map(([k, label]) => (
+            {visibleTabs.map(([k, label]) => (
               <button key={k} onClick={() => setTab(k)}
                 aria-current={tab === k ? 'page' : undefined}>{label}</button>
             ))}
+            <button type="button" className="whoami" onClick={logout} title={`Signed in as ${user?.email}`}>Sign out</button>
           </nav>
         </div>
       </header>
@@ -247,6 +257,8 @@ export default function App() {
           </div>
         )}
 
+        {tab === 'account' && <Account />}
+        {tab === 'users' && (isAdmin ? <Users /> : <div className="err" style={{ marginTop: 16 }}>Admins only.</div>)}
         {tab === 'terms' && <Terms />}
         {tab === 'privacy' && <Privacy />}
       </main>

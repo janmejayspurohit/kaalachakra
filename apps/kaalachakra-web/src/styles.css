@@ -1223,3 +1223,11 @@ ul.tight li { margin-bottom: 4px; }
 .verdict.ashubha, .verdict.no-usable-time { background: var(--bad-bg); color: var(--bad); }
 .nature-shubha { color: var(--ok); }
 .nature-ashubha, .nature-ashubha-classical { color: var(--bad); }
+
+/* Sign-in pages and the header's account area. */
+.auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.auth-card { width: 100%; max-width: 380px; }
+.auth-card input, .auth-card .btn { width: 100%; }
+.auth-card .btn + .btn { margin-top: 8px; }
+/* Sign out sits at the end of the tab bar and takes the tabs' own styling. */
+.tabs .whoami { opacity: .75; }

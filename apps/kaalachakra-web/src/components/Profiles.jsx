@@ -5,6 +5,7 @@ import DateField from './DateField.jsx';
 import { useDateFormat, useSettings } from '../settings.jsx';
 import { ConfirmDialog, Modal } from './Modal.jsx';
 import Kundali from './Kundali.jsx';
+import ShareDialog from './ShareDialog.jsx';
 
 const EMPTY = {
   name: '', gender: 'male',
@@ -37,6 +38,7 @@ export default function Profiles({ profiles, onChange }) {
    * say so instead of rendering an empty grid.
    */
   const [kundaliFor, setKundaliFor] = useState(null);
+  const [sharing, setSharing] = useState(null);
   const [chart, setChart] = useState(null);
   const [chartErr, setChartErr] = useState(null);
 
@@ -105,6 +107,8 @@ export default function Profiles({ profiles, onChange }) {
             )}
       </Modal>
 
+      <ShareDialog profile={sharing} onClose={() => setSharing(null)} />
+
       <ConfirmDialog
         open={Boolean(pendingDelete)}
         busy={deleting}
@@ -151,6 +155,9 @@ export default function Profiles({ profiles, onChange }) {
                     <td>
                       <strong>{p.name}</strong>
                       <div className="muted" style={{ fontSize: 12 }}>{cap(p.gender)} · {p.sampradaya}</div>
+                      {p.access && p.access !== 'owner' && (
+                        <span className="pill" title="Shared with you">shared by {p.ownerEmail} · {p.access === 'edit' ? 'can edit' : 'view only'}</span>
+                      )}
                     </td>
                     <td className="mono">
                       {fmt(`${pad(p.birth.year, 4)}-${pad(p.birth.month)}-${pad(p.birth.day)}`)}
@@ -169,8 +176,9 @@ export default function Profiles({ profiles, onChange }) {
                     <td>
                       <div style={{ display: 'flex', gap: 6 }}>
                         <button className="btn ghost" onClick={() => openKundali(p)}>Kundali</button>
-                        <button className="btn ghost" onClick={() => setEditing(toForm(p))}>Edit</button>
-                        <button className="btn danger" onClick={() => setPendingDelete(p)}>Delete</button>
+                        {p.access !== 'view' && <button className="btn ghost" onClick={() => setEditing(toForm(p))}>Edit</button>}
+                        {p.access === 'owner' && <button className="btn ghost" onClick={() => setSharing(p)}>Share</button>}
+                        {p.access === 'owner' && <button className="btn danger" onClick={() => setPendingDelete(p)}>Delete</button>}
                       </div>
                     </td>
                   </tr>
