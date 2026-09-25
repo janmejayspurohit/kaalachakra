@@ -9,7 +9,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 /**
  * Open (and migrate) the database.
@@ -38,48 +38,107 @@ function migrate(db) {
   const current = row ? Number(row.value) : 0;
   if (current >= SCHEMA_VERSION) return;
 
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS profiles (
-      id             TEXT PRIMARY KEY,
-      name           TEXT NOT NULL,
-      gender         TEXT NOT NULL CHECK (gender IN ('male','female','other')),
+  // Migration from version 1 to 2
+  if (current < 1) {
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS profiles (
+        id             TEXT PRIMARY KEY,
+        name           TEXT NOT NULL,
+        gender         TEXT NOT NULL CHECK (gender IN ('male','female','other')),
 
-      -- Birth moment, stored as the LOCAL civil time plus its offset, never as
-      -- a UTC instant. A birth record is a local fact; converting it to UTC on
-      -- the way in loses the offset the astrologer needs to see, and any later
-      -- timezone-database correction would silently move the chart.
-      birth_year     INTEGER NOT NULL,
-      birth_month    INTEGER NOT NULL CHECK (birth_month BETWEEN 1 AND 12),
-      birth_day      INTEGER NOT NULL CHECK (birth_day BETWEEN 1 AND 31),
-      birth_hour     INTEGER NOT NULL CHECK (birth_hour BETWEEN 0 AND 23),
-      birth_minute   INTEGER NOT NULL CHECK (birth_minute BETWEEN 0 AND 59),
-      birth_second   REAL    NOT NULL DEFAULT 0,
-      tz_offset_hours REAL   NOT NULL CHECK (tz_offset_hours BETWEEN -12 AND 14),
+        -- Birth moment, stored as the LOCAL civil time plus its offset, never as
+        -- a UTC instant. A birth record is a local fact; converting it to UTC on
+        -- the way in loses the offset the astrologer needs to see, and any later
+        -- timezone-database correction would silently move the chart.
+        birth_year     INTEGER NOT NULL,
+        birth_month    INTEGER NOT NULL CHECK (birth_month BETWEEN 1 AND 12),
+        birth_day      INTEGER NOT NULL CHECK (birth_day BETWEEN 1 AND 31),
+        birth_hour     INTEGER NOT NULL CHECK (birth_hour BETWEEN 0 AND 23),
+        birth_minute   INTEGER NOT NULL CHECK (birth_minute BETWEEN 0 AND 59),
+        birth_second   REAL    NOT NULL DEFAULT 0,
+        tz_offset_hours REAL   NOT NULL CHECK (tz_offset_hours BETWEEN -12 AND 14),
 
-      place_name     TEXT,
-      latitude       REAL NOT NULL CHECK (latitude BETWEEN -90 AND 90),
-      longitude      REAL NOT NULL CHECK (longitude BETWEEN -180 AND 180),
-      altitude       REAL NOT NULL DEFAULT 0,
+        place_name     TEXT,
+        latitude       REAL NOT NULL CHECK (latitude BETWEEN -90 AND 90),
+        longitude      REAL NOT NULL CHECK (longitude BETWEEN -180 AND 180),
+        altitude       REAL NOT NULL DEFAULT 0,
 
-      -- The ayanamsa is recorded per profile because it can move a nakshatra
-      -- boundary by ~2 minutes, which can change the janma nakshatra and so
-      -- the dasha balance and every kuta. A chart without its ayanamsa is not
-      -- reproducible.
-      ayanamsa       TEXT NOT NULL DEFAULT 'trueCitra',
-      sampradaya     TEXT NOT NULL DEFAULT 'uttaradi',
+        -- The ayanamsa is recorded per profile because it can move a nakshatra
+        -- boundary by ~2 minutes, which can change the janma nakshatra and so
+        -- the dasha balance and every kuta. A chart without its ayanamsa is not
+        -- reproducible.
+        ayanamsa       TEXT NOT NULL DEFAULT 'trueCitra',
+        sampradaya     TEXT NOT NULL DEFAULT 'uttaradi',
 
-      notes          TEXT,
-      created_at     TEXT NOT NULL,
-      updated_at     TEXT NOT NULL
-    );
+        notes          TEXT,
+        created_at     TEXT NOT NULL,
+        updated_at     TEXT NOT NULL
+      );
 
-    CREATE INDEX IF NOT EXISTS idx_profiles_name ON profiles(name);
+      CREATE INDEX IF NOT EXISTS idx_profiles_name ON profiles(name);
 
-    CREATE TABLE IF NOT EXISTS settings (
-      key   TEXT PRIMARY KEY,
-      value TEXT NOT NULL
-    );
-  `);
+      CREATE TABLE IF NOT EXISTS settings (
+        key   TEXT PRIMARY KEY,
+        value TEXT NOT NULL
+      );
+    `);
+  }
+
+  // Version 2 migration: add owner_id column to profiles and create new tables
+  if (current < 2) {
+    db.exec('BEGIN');
+    try {
+      // Create new tables for users, sessions, and profile_shares first
+      db.exec(`
+        CREATE TABLE IF NOT EXISTS users (
+          id                   TEXT PRIMARY KEY,
+          email                TEXT NOT NULL UNIQUE COLLATE NOCASE,
+          password_hash        TEXT NOT NULL,
+          role                 TEXT NOT NULL CHECK (role IN ('admin','user')),
+          must_change_password INTEGER NOT NULL DEFAULT 1,
+          totp_secret          TEXT,
+          totp_pending_secret  TEXT,
+          totp_enabled         INTEGER NOT NULL DEFAULT 0,
+          totp_last_step       INTEGER,
+          failed_attempts      INTEGER NOT NULL DEFAULT 0,
+          locked_until         TEXT,
+          created_at           TEXT NOT NULL,
+          updated_at           TEXT NOT NULL,
+          last_login_at        TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS sessions (
+          token_hash   TEXT PRIMARY KEY,
+          user_id      TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          stage        TEXT NOT NULL CHECK (stage IN ('mfa','full')),
+          created_at   TEXT NOT NULL,
+          expires_at   TEXT NOT NULL,
+          last_seen_at TEXT NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS profile_shares (
+          profile_id TEXT NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
+          user_id    TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          permission TEXT NOT NULL CHECK (permission IN ('view','edit')),
+          created_at TEXT NOT NULL,
+          PRIMARY KEY (profile_id, user_id)
+        );
+      `);
+      
+      // Add owner_id column to profiles table
+      db.exec('ALTER TABLE profiles ADD COLUMN owner_id TEXT REFERENCES users(id)');
+      
+      // Add indexes
+      db.exec('CREATE INDEX IF NOT EXISTS idx_sessions_user_id ON sessions(user_id)');
+      db.exec('CREATE INDEX IF NOT EXISTS idx_profiles_owner_id ON profiles(owner_id)');
+      db.exec('CREATE INDEX IF NOT EXISTS idx_profile_shares_user_id ON profile_shares(user_id)');
+      
+      db.exec('COMMIT');
+    } catch (err) {
+      db.exec('ROLLBACK');
+      throw err;
+    }
+  }
 
   db.prepare('INSERT OR REPLACE INTO schema_meta (key, value) VALUES (?, ?)')
     .run('version', String(SCHEMA_VERSION));
