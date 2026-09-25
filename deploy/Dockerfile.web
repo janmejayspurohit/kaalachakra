@@ -1,0 +1,17 @@
+FROM node:24-bookworm-slim AS build
+RUN corepack enable && corepack prepare pnpm@12.5.1 --activate
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY packages/swisseph/package.json packages/swisseph/
+COPY packages/ganita/package.json packages/ganita/
+COPY packages/places/package.json packages/places/
+COPY packages/shared/package.json packages/shared/
+COPY apps/kaalachakra-api/package.json apps/kaalachakra-api/
+COPY apps/kaalachakra-web/package.json apps/kaalachakra-web/
+RUN pnpm install --frozen-lockfile --filter @kaalachakra/web...
+COPY apps/kaalachakra-web apps/kaalachakra-web
+RUN pnpm --filter @kaalachakra/web build
+
+FROM nginx:1.27-alpine
+COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/apps/kaalachakra-web/dist /usr/share/nginx/html

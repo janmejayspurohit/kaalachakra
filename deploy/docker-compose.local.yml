@@ -1,0 +1,15 @@
+# Smoke test: docker compose -f deploy/docker-compose.local.yml -p kc-smoke up -d --build
+# Web on http://127.0.0.1:8088 only. Data in ./.deploy-data (gitignored).
+services:
+  kaalachakra-api:
+    build: { context: .., dockerfile: deploy/Dockerfile.api }
+    environment:
+      NODE_ENV: production
+      KAALACHAKRA_COOKIE_SECURE: "0"
+    volumes:
+      - ../.deploy-data:/data
+      - ../packages/places/data/gazetteer.db:/app/packages/places/data/gazetteer.db:ro
+  kaalachakra-web:
+    build: { context: .., dockerfile: deploy/Dockerfile.web }
+    depends_on: [kaalachakra-api]
+    ports: ["127.0.0.1:8088:80"]

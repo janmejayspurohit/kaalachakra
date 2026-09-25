@@ -1,0 +1,31 @@
+# Merge these two services into ~/docker/docker-compose.yml on jserver1.
+# Build contexts are relative to ~/docker; the code lives in ~/code/kaalachakra.
+services:
+  kaalachakra-api:
+    build:
+      context: ../code/kaalachakra
+      dockerfile: deploy/Dockerfile.api
+    container_name: kaalachakra-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      KAALACHAKRA_ALLOWED_ORIGINS: https://astro.janmejay.info
+    volumes:
+      - /data/apps/kaalachakra/data:/data
+      - /data/apps/kaalachakra/places/gazetteer.db:/app/packages/places/data/gazetteer.db:ro
+    networks: [proxy-net]
+    mem_limit: 512m
+
+  kaalachakra-web:
+    build:
+      context: ../code/kaalachakra
+      dockerfile: deploy/Dockerfile.web
+    container_name: kaalachakra-web
+    restart: unless-stopped
+    depends_on: [kaalachakra-api]
+    networks: [proxy-net]
+    mem_limit: 128m
+
+networks:
+  proxy-net:
+    external: true

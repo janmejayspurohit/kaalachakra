@@ -16,3 +16,6 @@ secret.key
 # Generated gazetteer (147 MB, over GitHub's limit) and its GeoNames inputs.
 # Rebuild with `pnpm --filter @kaalachakra/places build:data`.
 packages/places/data/
+
+# Local Docker smoke-test data.
+.deploy-data/

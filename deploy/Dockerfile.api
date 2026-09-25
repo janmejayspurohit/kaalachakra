@@ -1,0 +1,36 @@
+# Kaalachakra API. One build stage compiles the Swiss Ephemeris addon
+# (node-gyp is a dev dependency, so dev dependencies are kept).
+FROM node:24-bookworm-slim AS build
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends python3 make g++ \
+ && rm -rf /var/lib/apt/lists/*
+RUN corepack enable && corepack prepare pnpm@12.5.1 --activate
+WORKDIR /app
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY packages/swisseph/package.json packages/swisseph/
+COPY packages/ganita/package.json packages/ganita/
+COPY packages/places/package.json packages/places/
+COPY packages/shared/package.json packages/shared/
+COPY apps/kaalachakra-api/package.json apps/kaalachakra-api/
+COPY apps/kaalachakra-web/package.json apps/kaalachakra-web/
+COPY packages/swisseph packages/swisseph
+RUN pnpm install --frozen-lockfile
+COPY . .
+RUN pnpm install --frozen-lockfile --offline \
+ && node -e "import('@kaalachakra/swisseph').then(()=>console.log('swisseph addon loads'))" --input-type=module
+
+FROM node:24-bookworm-slim
+WORKDIR /app
+COPY --from=build /app /app
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=5174 \
+    KAALACHAKRA_DB=/data/kaalachakra.db \
+    KAALACHAKRA_COOKIE_SECURE=1 \
+    KAALACHAKRA_TRUST_CF_IP=1
+RUN mkdir -p /data && chown node:node /data
+USER node
+EXPOSE 5174
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:5174/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "apps/kaalachakra-api/src/server.js"]
