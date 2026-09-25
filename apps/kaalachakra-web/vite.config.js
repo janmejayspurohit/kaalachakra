@@ -7,6 +7,9 @@ export default defineConfig({
     port: 5173,
     // Proxy keeps the browser on one origin, so no CORS in dev and the
     // production build can sit behind the same reverse proxy unchanged.
-    proxy: { '/api': { target: 'http://127.0.0.1:5174', changeOrigin: true, rewrite: (p) => p.replace(/^\/api/, '') } },
+    // changeOrigin stays FALSE: the API's cross-site check compares the
+    // browser's Origin with the Host header, so the proxy must pass Host
+    // through unchanged - exactly as nginx does in production.
+    proxy: { '/api': { target: 'http://127.0.0.1:5174', changeOrigin: false, rewrite: (p) => p.replace(/^\/api/, '') } },
   },
 });
