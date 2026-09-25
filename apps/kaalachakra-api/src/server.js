@@ -25,7 +25,7 @@ import { localiseDay, LANGUAGES } from './localise.js';
 import { Gazetteer } from '@kaalachakra/places';
 import { openDb } from './db/index.js';
 import {
-  listProfiles, countProfiles, getProfile, createProfile, updateProfile,
+  listProfilesFor, getProfileFor, listShares, upsertShare, deleteShare, createProfile, updateProfile,
   deleteProfile, summaryFor, janmaFor, dashaFor, saturnFor, chartFor,
   currentDashaFor, nowJd,
 } from './profiles.js';
@@ -34,6 +34,7 @@ import {
   placeSearchSchema, dashaQuerySchema, ganitaEnum, muhurtaQuerySchema, ganitaQuerySchema,
 } from './schemas.js';
 import { registerAuth } from './auth/plugin.js';
+import { getUserByEmail } from './auth/store.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 
@@ -179,10 +180,10 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
     // The day-summary box is per-profile. If no profiles exist, the UI must
     // not render the box at all - so we return an explicit empty array and a
     // flag rather than null, which a client could mistake for "loading".
-    const profiles = listProfiles(db);
+    const profiles = listProfilesFor(db, req.session.user.id);
     // The person's janma nakshatra and dasha follow the same ganita as the day.
     const summaries = withGanita(q.ganita, () => (q.profileId
-      ? [getProfile(db, q.profileId)].filter(Boolean).map((p) => summaryFor(p, day))
+      ? [getProfileFor(db, req.session.user.id, q.profileId)].filter(Boolean).map((p) => summaryFor(p, day))
       : profiles.map((p) => summaryFor(p, day))));
 
     // Localisation is applied at the API boundary, never inside the engine.
@@ -214,7 +215,7 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
     if (place.error) return reply.code(400).send({ error: place.error });
     let profile = null, janma = null, janmaLagna = null;
     if (q.profileId) {
-      profile = getProfile(db, q.profileId);
+      profile = getProfileFor(db, req.session.user.id, q.profileId);
       if (!profile) return reply.code(404).send({ error: 'profile not found' });
       janma = janmaIn(q.ganita, profile);
       janmaLagna = chartFor(profile).lagna.rashi;
@@ -569,30 +570,82 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
   /* ----------------------------------------------------------- profiles */
 
   app.get('/profiles', { schema: { querystring: ganitaQuerySchema } }, async (req) => ({
-    profiles: listProfiles(db).map((p) => ({ ...p, janma: janmaIn(req.query.ganita, p) })),
+    profiles: listProfilesFor(db, req.session.user.id).map((p) => ({ ...p, janma: janmaIn(req.query.ganita, p) })),
   }));
 
   app.get('/profiles/:id', { schema: { querystring: ganitaQuerySchema } }, async (req, reply) => {
-    const p = getProfile(db, req.params.id);
+    const p = getProfileFor(db, req.session.user.id, req.params.id);
     if (!p) return reply.code(404).send({ error: 'profile not found' });
     return { ...p, janma: janmaIn(req.query.ganita, p) };
   });
 
   app.post('/profiles', { schema: { body: profileBodySchema, querystring: ganitaQuerySchema } }, async (req, reply) => {
-    const created = createProfile(db, req.body, gazetteer);
+    const created = createProfile(db, req.body, gazetteer, req.session.user.id);
     return reply.code(201).send({ ...created, janma: janmaIn(req.query.ganita, created) });
   });
 
   app.put('/profiles/:id', { schema: { body: profileBodySchema, querystring: ganitaQuerySchema } }, async (req, reply) => {
+    // Private by default: another user's profile is indistinguishable from a
+    // missing one (404); a view-only share may read but not change it.
+    const existing = getProfileFor(db, req.session.user.id, req.params.id);
+    if (!existing) return reply.code(404).send({ error: 'profile not found' });
+    if (existing.access === 'view') return reply.code(403).send({ error: 'read-only share' });
     const updated = updateProfile(db, req.params.id, req.body, gazetteer);
-    if (!updated) return reply.code(404).send({ error: 'profile not found' });
     return { ...updated, janma: janmaIn(req.query.ganita, updated) };
   });
 
   app.delete('/profiles/:id', async (req, reply) => {
-    if (!deleteProfile(db, req.params.id)) {
-      return reply.code(404).send({ error: 'profile not found' });
-    }
+    const existing = getProfileFor(db, req.session.user.id, req.params.id);
+    if (!existing) return reply.code(404).send({ error: 'profile not found' });
+    if (existing.access !== 'owner') return reply.code(403).send({ error: 'only the owner can delete' });
+    deleteProfile(db, req.params.id); // its shares go with it (ON DELETE CASCADE)
+    return reply.code(204).send();
+  });
+
+  /* ------------------------------------------------------------ sharing */
+
+  /** Only the owner sees or changes who a profile is shared with. */
+  function ownedProfile(req, reply) {
+    const p = getProfileFor(db, req.session.user.id, req.params.id);
+    if (!p) { reply.code(404).send({ error: 'profile not found' }); return null; }
+    if (p.access !== 'owner') { reply.code(403).send({ error: 'only the owner can manage sharing' }); return null; }
+    return p;
+  }
+
+  app.get('/profiles/:id/shares', async (req, reply) => {
+    const p = ownedProfile(req, reply);
+    if (!p) return reply;
+    return { shares: listShares(db, p.id) };
+  });
+
+  app.post('/profiles/:id/shares', {
+    schema: {
+      body: {
+        type: 'object',
+        required: ['email', 'permission'],
+        properties: {
+          email: { type: 'string', maxLength: 254 },
+          permission: { type: 'string', enum: ['view', 'edit'] },
+        },
+      },
+    },
+  }, async (req, reply) => {
+    const p = ownedProfile(req, reply);
+    if (!p) return reply;
+    const target = getUserByEmail(db, req.body.email.trim());
+    if (!target) return reply.code(404).send({ error: 'no such account' });
+    if (target.id === req.session.user.id) return reply.code(400).send({ error: 'cannot share with yourself' });
+    upsertShare(db, p.id, target.id, req.body.permission);
+    return reply.code(204).send();
+  });
+
+  // The owner removes a share, or the person it was shared with leaves it.
+  app.delete('/profiles/:id/shares/:userId', async (req, reply) => {
+    const p = getProfileFor(db, req.session.user.id, req.params.id);
+    if (!p) return reply.code(404).send({ error: 'profile not found' });
+    const leaving = req.params.userId === req.session.user.id;
+    if (p.access !== 'owner' && !leaving) return reply.code(403).send({ error: 'only the owner can manage sharing' });
+    if (!deleteShare(db, p.id, req.params.userId)) return reply.code(404).send({ error: 'no such share' });
     return reply.code(204).send();
   });
 
@@ -607,7 +660,7 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
    * rarely.
    */
   app.get('/profiles/:id/chart', { schema: { querystring: ganitaQuerySchema } }, async (req, reply) => {
-    const p = getProfile(db, req.params.id);
+    const p = getProfileFor(db, req.session.user.id, req.params.id);
     if (!p) return reply.code(404).send({ error: 'profile not found' });
     const janma = janmaIn(req.query.ganita, p);
     const chart = natalSummary(chartFor(p));
@@ -631,7 +684,7 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
     withGanita(req.query.ganita, () => dashaHandler(req, reply)));
 
   function dashaHandler(req, reply) {
-    const p = getProfile(db, req.params.id);
+    const p = getProfileFor(db, req.session.user.id, req.params.id);
     if (!p) return reply.code(404).send({ error: 'profile not found' });
 
     const fromYear = req.query.fromYear ?? p.birth.year;
@@ -687,7 +740,7 @@ export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassw
     const resolveSide = (explicit, profileId, who) => {
       if (explicit) return { point: explicit, profile: null };
       if (!profileId) return { error: `provide either ${who} or ${who}ProfileId` };
-      const p = getProfile(db, profileId);
+      const p = getProfileFor(db, req.session.user.id, profileId);
       if (!p) return { error: `${who} profile not found` };
       const j = janmaFor(p);
       return { point: { nakshatra: j.nakshatra.index, pada: j.nakshatra.pada }, profile: p };

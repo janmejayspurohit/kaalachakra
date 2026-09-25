@@ -39,6 +39,31 @@ export function listProfiles(db) {
   return db.prepare(queries.list).all().map(rowToProfile);
 }
 
+/** Profiles the user owns or that are shared with them, each with `access` and `ownerEmail`. */
+export function listProfilesFor(db, userId) {
+  return db.prepare(queries.listFor).all(userId, userId, userId, userId)
+    .map((r) => ({ ...rowToProfile(r), access: r.access, ownerEmail: r.owner_email }));
+}
+
+/** One profile if the user owns it or it is shared with them; otherwise null. */
+export function getProfileFor(db, userId, id) {
+  const r = db.prepare(queries.getFor).get(userId, userId, id, userId, userId);
+  return r ? { ...rowToProfile(r), access: r.access, ownerEmail: r.owner_email } : null;
+}
+
+export function listShares(db, profileId) {
+  return db.prepare(queries.sharesList).all(profileId)
+    .map((r) => ({ userId: r.user_id, email: r.email, permission: r.permission }));
+}
+
+export function upsertShare(db, profileId, userId, permission) {
+  db.prepare(queries.shareUpsert).run(profileId, userId, permission, new Date().toISOString());
+}
+
+export function deleteShare(db, profileId, userId) {
+  return db.prepare(queries.shareDelete).run(profileId, userId).changes > 0;
+}
+
 export function countProfiles(db) {
   return db.prepare(queries.count).get().n;
 }
@@ -70,7 +95,7 @@ function offsetFor(birth, place) {
   return r;
 }
 
-export function createProfile(db, body, gazetteer = null) {
+export function createProfile(db, body, gazetteer = null, ownerId = null) {
   const now = new Date().toISOString();
   const id = randomUUID();
   const birth = body.birth;
@@ -83,7 +108,7 @@ export function createProfile(db, body, gazetteer = null) {
     off.offsetHours,
     place.name ?? null, place.latitude, place.longitude, place.altitude ?? 0,
     body.ayanamsa ?? 'trueCitra', body.sampradaya ?? 'uttaradi',
-    body.notes ?? null, now, now
+    body.notes ?? null, now, now, ownerId
   );
   const created = getProfile(db, id);
   return { ...created, tzResolution: off };

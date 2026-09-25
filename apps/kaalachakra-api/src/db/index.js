@@ -179,8 +179,30 @@ export const queries = {
     id, name, gender, birth_year, birth_month, birth_day,
     birth_hour, birth_minute, birth_second, tz_offset_hours,
     place_name, latitude, longitude, altitude,
-    ayanamsa, sampradaya, notes, created_at, updated_at
-  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+    ayanamsa, sampradaya, notes, created_at, updated_at, owner_id
+  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+  // Profiles a user can see: owned, or shared with them. `access` is
+  // 'owner' | 'edit' | 'view'. Parameters: (userId, userId, userId, userId).
+  listFor: `SELECT p.*, u.email AS owner_email,
+      CASE WHEN p.owner_id = ? THEN 'owner' ELSE s.permission END AS access
+    FROM profiles p
+    JOIN users u ON u.id = p.owner_id
+    LEFT JOIN profile_shares s ON s.profile_id = p.id AND s.user_id = ?
+    WHERE p.owner_id = ? OR s.user_id = ?
+    ORDER BY p.name COLLATE NOCASE`,
+  // One profile, only if the user can see it. (userId, userId, id, userId, userId)
+  getFor: `SELECT p.*, u.email AS owner_email,
+      CASE WHEN p.owner_id = ? THEN 'owner' ELSE s.permission END AS access
+    FROM profiles p
+    JOIN users u ON u.id = p.owner_id
+    LEFT JOIN profile_shares s ON s.profile_id = p.id AND s.user_id = ?
+    WHERE p.id = ? AND (p.owner_id = ? OR s.user_id = ?)`,
+  sharesList: `SELECT s.user_id, u.email, s.permission
+    FROM profile_shares s JOIN users u ON u.id = s.user_id
+    WHERE s.profile_id = ? ORDER BY u.email COLLATE NOCASE`,
+  shareUpsert: `INSERT INTO profile_shares (profile_id, user_id, permission, created_at) VALUES (?,?,?,?)
+    ON CONFLICT(profile_id, user_id) DO UPDATE SET permission = excluded.permission`,
+  shareDelete: 'DELETE FROM profile_shares WHERE profile_id = ? AND user_id = ?',
   update: `UPDATE profiles SET
     name=?, gender=?, birth_year=?, birth_month=?, birth_day=?,
     birth_hour=?, birth_minute=?, birth_second=?, tz_offset_hours=?,
