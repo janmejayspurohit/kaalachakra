@@ -195,8 +195,7 @@ static napi_value js_houses_ex(napi_env env, napi_callback_info info) {
   D(0, "jd", jd); I(1, "flags", iflag);
   D(2, "lat", lat); D(3, "lon", lon); I(4, "hsys", hsys);
   double cusps[37], ascmc[10];
-  char serr[SERR_LEN]; serr[0] = '\0';
-  int rc = swe_houses_ex(jd, iflag, lat, lon, hsys, cusps, ascmc);
+  int rc = swe_houses_ex(jd, iflag, lat, lon, hsys, cusps, ascmc); /* no serr: this call has none */
   napi_value o; napi_create_object(env, &o);
   if (rc < 0) { set_s(env, o, "error", "swe_houses_ex failed"); return o; }
   /* Gauquelin (hsys 'G') returns 36 cusps; every other system returns 12. */
