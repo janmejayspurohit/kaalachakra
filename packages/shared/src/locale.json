@@ -1,0 +1,921 @@
+{
+  "languages": [
+    "english",
+    "vedicenglish",
+    "hindi",
+    "telugu",
+    "kannada"
+  ],
+  "tithi": [
+    {
+      "english": "Pratipada",
+      "vedicenglish": "Pratipada",
+      "hindi": "प्रतिपद",
+      "telugu": "ప్రతిపద",
+      "kannada": "ಪ್ರತಿಪದ"
+    },
+    {
+      "english": "Dviteeya",
+      "vedicenglish": "Dviteeya",
+      "hindi": "द्वितीय",
+      "telugu": "ద్వితీయ",
+      "kannada": "ದ್ವಿತೀಯ"
+    },
+    {
+      "english": "Triteeya",
+      "vedicenglish": "Triteeya",
+      "hindi": "तृतीय",
+      "telugu": "తృతీయ",
+      "kannada": "ತೃತೀಯ"
+    },
+    {
+      "english": "Chaturthi",
+      "vedicenglish": "Chaturthi",
+      "hindi": "चतुर्थि",
+      "telugu": "చతుర్థి",
+      "kannada": "ಚತುರ್ಥಿ"
+    },
+    {
+      "english": "Panchami",
+      "vedicenglish": "Panchami",
+      "hindi": "पञ्चमि",
+      "telugu": "పంచమి",
+      "kannada": "ಪಂಚಮಿ"
+    },
+    {
+      "english": "Sashti",
+      "vedicenglish": "Sashti",
+      "hindi": "षष्ठि",
+      "telugu": "షష్ఠి",
+      "kannada": "ಷಷ್ಠಿ"
+    },
+    {
+      "english": "Sapthami",
+      "vedicenglish": "Sapthami",
+      "hindi": "सप्तमि",
+      "telugu": "సప్తమి",
+      "kannada": "ಸಪ್ತಮಿ"
+    },
+    {
+      "english": "Astami",
+      "vedicenglish": "Astami",
+      "hindi": "अष्टमि",
+      "telugu": "అష్టమి",
+      "kannada": "ಅಷ್ಟಮಿ"
+    },
+    {
+      "english": "Navami",
+      "vedicenglish": "Navami",
+      "hindi": "नवमि",
+      "telugu": "నవమి",
+      "kannada": "ನವಮಿ"
+    },
+    {
+      "english": "Dashami",
+      "vedicenglish": "Dashami",
+      "hindi": "दशमि",
+      "telugu": "దశమి",
+      "kannada": "ದಶಮಿ"
+    },
+    {
+      "english": "Ekadashi",
+      "vedicenglish": "Ekadashi",
+      "hindi": "एकादशि",
+      "telugu": "ఏకాదశి",
+      "kannada": "ಏಕಾದಶಿ"
+    },
+    {
+      "english": "Dwadashi",
+      "vedicenglish": "Dwadashi",
+      "hindi": "द्वादशि",
+      "telugu": "ద్వాదశి",
+      "kannada": "ದ್ವಾದಶಿ"
+    },
+    {
+      "english": "Trayodashi",
+      "vedicenglish": "Trayodashi",
+      "hindi": "त्रयॊदशि",
+      "telugu": "త్రయోదశి",
+      "kannada": "ತ್ರಯೋದಶಿ"
+    },
+    {
+      "english": "Chaturdashi",
+      "vedicenglish": "Chaturdashi",
+      "hindi": "चतुर्दशि",
+      "telugu": "చతుర్దశి",
+      "kannada": "ಚತುರ್ದಶಿ"
+    },
+    {
+      "english": "Poornima",
+      "vedicenglish": "Poornima",
+      "hindi": "पूर्णिम",
+      "telugu": "పూర్ణిమ",
+      "kannada": "ಪೂರ್ಣಿಮ"
+    },
+    {
+      "english": "Pratipada",
+      "vedicenglish": "Pratipada",
+      "hindi": "प्रतिपद",
+      "telugu": "ప్రతిపద",
+      "kannada": "ಪ್ರತಿಪದ"
+    },
+    {
+      "english": "Dviteeya",
+      "vedicenglish": "Dviteeya",
+      "hindi": "द्वितीय",
+      "telugu": "ద్వితీయ",
+      "kannada": "ದ್ವಿತೀಯ"
+    },
+    {
+      "english": "Triteeya",
+      "vedicenglish": "Triteeya",
+      "hindi": "तृतीय",
+      "telugu": "తృతీయ",
+      "kannada": "ತೃತೀಯ"
+    },
+    {
+      "english": "Chaturthi",
+      "vedicenglish": "Chaturthi",
+      "hindi": "चतुर्थि",
+      "telugu": "చతుర్థి",
+      "kannada": "ಚತುರ್ಥಿ"
+    },
+    {
+      "english": "Panchami",
+      "vedicenglish": "Panchami",
+      "hindi": "पञ्चमि",
+      "telugu": "పంచమి",
+      "kannada": "ಪಂಚಮಿ"
+    },
+    {
+      "english": "Sashti",
+      "vedicenglish": "Sashti",
+      "hindi": "षष्ठि",
+      "telugu": "షష్ఠి",
+      "kannada": "ಷಷ್ಠಿ"
+    },
+    {
+      "english": "Sapthami",
+      "vedicenglish": "Sapthami",
+      "hindi": "सप्तमि",
+      "telugu": "సప్తమి",
+      "kannada": "ಸಪ್ತಮಿ"
+    },
+    {
+      "english": "Astami",
+      "vedicenglish": "Astami",
+      "hindi": "अष्टमि",
+      "telugu": "అష్టమి",
+      "kannada": "ಅಷ್ಟಮಿ"
+    },
+    {
+      "english": "Navami",
+      "vedicenglish": "Navami",
+      "hindi": "नवमि",
+      "telugu": "నవమి",
+      "kannada": "ನವಮಿ"
+    },
+    {
+      "english": "Dashami",
+      "vedicenglish": "Dashami",
+      "hindi": "दशमि",
+      "telugu": "దశమి",
+      "kannada": "ದಶಮಿ"
+    },
+    {
+      "english": "Ekadashi",
+      "vedicenglish": "Ekadashi",
+      "hindi": "एकादशि",
+      "telugu": "ఏకాదశి",
+      "kannada": "ಏಕಾದಶಿ"
+    },
+    {
+      "english": "Dwadashi",
+      "vedicenglish": "Dwadashi",
+      "hindi": "द्वादशि",
+      "telugu": "ద్వాదశి",
+      "kannada": "ದ್ವಾದಶಿ"
+    },
+    {
+      "english": "Trayodashi",
+      "vedicenglish": "Trayodashi",
+      "hindi": "त्रयॊदशि",
+      "telugu": "త్రయోదశి",
+      "kannada": "ತ್ರಯೋದಶಿ"
+    },
+    {
+      "english": "Chaturdashi",
+      "vedicenglish": "Chaturdashi",
+      "hindi": "चतुर्दशि",
+      "telugu": "చతుర్దశి",
+      "kannada": "ಚತುರ್ದಶಿ"
+    },
+    {
+      "english": "Amavasya",
+      "vedicenglish": "Amavasya",
+      "hindi": "अमावास्य",
+      "telugu": "అమావాస్య",
+      "kannada": "ಅಮಾವಾಸ್ಯೆ"
+    }
+  ],
+  "paksha": [
+    {
+      "english": "Shukla",
+      "vedicenglish": "Shukla",
+      "hindi": "शुक्ल",
+      "telugu": "శుక్ల",
+      "kannada": "ಶುಕ್ಲ"
+    },
+    {
+      "english": "Krishna",
+      "vedicenglish": "Krishna",
+      "hindi": "कृष्ण",
+      "telugu": "కృష్ణ",
+      "kannada": "ಕೃಷ್ಣ"
+    }
+  ],
+  "nakshatra": [
+    {
+      "english": "Aswini",
+      "vedicenglish": "Aswini",
+      "hindi": "अश्विनि",
+      "telugu": "అశ్విని",
+      "kannada": "ಅಶ್ವಿನಿ"
+    },
+    {
+      "english": "Bharani",
+      "vedicenglish": "Bharani",
+      "hindi": "भरणी",
+      "telugu": "భరణి",
+      "kannada": "ಭರಣಿ"
+    },
+    {
+      "english": "Krithika",
+      "vedicenglish": "Krithika",
+      "hindi": "कृत्तिका",
+      "telugu": "కృతిక",
+      "kannada": "ಕೃತ್ತಿಕ"
+    },
+    {
+      "english": "Rohini",
+      "vedicenglish": "Rohini",
+      "hindi": "रोहिणी",
+      "telugu": "రోహిణి",
+      "kannada": "ರೋಹಿಣಿ"
+    },
+    {
+      "english": "Mrigashira",
+      "vedicenglish": "Mrigashira",
+      "hindi": "म्रृगशीर्षा",
+      "telugu": "మృగశిర",
+      "kannada": "ಮ್ರಿಗಶಿರ"
+    },
+    {
+      "english": "Aardhra",
+      "vedicenglish": "Aardhra",
+      "hindi": "आर्द्रा",
+      "telugu": "ఆరుద్ర",
+      "kannada": "ಆರ್ದ್ರ"
+    },
+    {
+      "english": "Punarvasu",
+      "vedicenglish": "Punarvasu",
+      "hindi": "पुनर्वसु",
+      "telugu": "పునర్వసు",
+      "kannada": "ಪುನರ್ವಸು"
+    },
+    {
+      "english": "Pushyami",
+      "vedicenglish": "Pushyami",
+      "hindi": "पुष्य",
+      "telugu": "పుష్య",
+      "kannada": "ಪುಷ್ಯ"
+    },
+    {
+      "english": "Ashlesha",
+      "vedicenglish": "Ashlesha",
+      "hindi": "आश्लेषा",
+      "telugu": "ఆశ్లేష",
+      "kannada": "ಆಶ್ಲೇಷ"
+    },
+    {
+      "english": "Magha",
+      "vedicenglish": "Magha",
+      "hindi": "मघा",
+      "telugu": "మాఘ",
+      "kannada": "ಮಾಘ"
+    },
+    {
+      "english": "P.Phalguni",
+      "vedicenglish": "P.Phalguni",
+      "hindi": "पूर्वफाल्गुनी",
+      "telugu": "పూర్వాఫల్గుణి",
+      "kannada": "ಪೂರ್ವಾಫಾಲ್ಗುಣಿ"
+    },
+    {
+      "english": "U.Phalguni",
+      "vedicenglish": "U.Phalguni",
+      "hindi": "उत्तरफाल्गुनी",
+      "telugu": "ఉత్తరాఫల్గుణి",
+      "kannada": "ಉತ್ತರಾಫಾಲ್ಗುಣಿ"
+    },
+    {
+      "english": "Hastha",
+      "vedicenglish": "Hastha",
+      "hindi": "हस्त",
+      "telugu": "హస్త",
+      "kannada": "ಹಸ್ತ"
+    },
+    {
+      "english": "Chitra",
+      "vedicenglish": "Chitra",
+      "hindi": "चित्रा",
+      "telugu": "చిత్ర",
+      "kannada": "ಚಿತ್ರ"
+    },
+    {
+      "english": "Swaathi",
+      "vedicenglish": "Swaathi",
+      "hindi": "स्वाति",
+      "telugu": "స్వాతి",
+      "kannada": "ಸ್ವಾತಿ"
+    },
+    {
+      "english": "Vishaakha",
+      "vedicenglish": "Vishaakha",
+      "hindi": "विशाखा",
+      "telugu": "విశాఖ",
+      "kannada": "ವಿಶಾಖ"
+    },
+    {
+      "english": "Anuraadha",
+      "vedicenglish": "Anuraadha",
+      "hindi": "अनुराधा",
+      "telugu": "అనురాధ",
+      "kannada": "ಅನುರಾಧ"
+    },
+    {
+      "english": "Jyeshta",
+      "vedicenglish": "Jyeshta",
+      "hindi": "ज्येष्ठा",
+      "telugu": "జ్యేష్ఠ",
+      "kannada": "ಜ್ಯೇಷ್ಠ"
+    },
+    {
+      "english": "Moola",
+      "vedicenglish": "Moola",
+      "hindi": "मूल",
+      "telugu": "మూలా",
+      "kannada": "ಮೂಲಾ"
+    },
+    {
+      "english": "Poorvashaada",
+      "vedicenglish": "Poorvashaada",
+      "hindi": "पूर्वाषाढ़ा",
+      "telugu": "పూర్వాషాఢ",
+      "kannada": "ಪೂರ್ವಾಷಾಢ"
+    },
+    {
+      "english": "Uthrashaada",
+      "vedicenglish": "Uthrashaada",
+      "hindi": "उत्तराषाढ़ा",
+      "telugu": "ఉత్తరాషాఢ",
+      "kannada": "ಉತ್ತರಾಷಾಢ"
+    },
+    {
+      "english": "Shraavan",
+      "vedicenglish": "Shraavan",
+      "hindi": "श्रवण",
+      "telugu": "శ్రవణ",
+      "kannada": "ಶ್ರವಣ"
+    },
+    {
+      "english": "Dhanishta",
+      "vedicenglish": "Dhanishta",
+      "hindi": "धनिष्ठा",
+      "telugu": "ధనిష్ఠ",
+      "kannada": "ಧನಿಷ್ಠ"
+    },
+    {
+      "english": "Shathabhisha",
+      "vedicenglish": "Shathabhisha",
+      "hindi": "शतभिषा",
+      "telugu": "శతభిష",
+      "kannada": "ಶತಭಿಷ"
+    },
+    {
+      "english": "P.Bhadra",
+      "vedicenglish": "P.Bhadra",
+      "hindi": "पूर्वभाद्र",
+      "telugu": "పూర్వాభాద్ర",
+      "kannada": "ಪೂರ್ವಾಭಾದ್ರ"
+    },
+    {
+      "english": "U.Bhadra",
+      "vedicenglish": "U.Bhadra",
+      "hindi": "उत्तरभाद्र",
+      "telugu": "ఉత్తరాభాద్ర",
+      "kannada": "ಉತ್ತರಾಭಾದ್ರ"
+    },
+    {
+      "english": "Revathi",
+      "vedicenglish": "Revathi",
+      "hindi": "रेवती",
+      "telugu": "రేవతి",
+      "kannada": "ರೇವತಿ"
+    }
+  ],
+  "masa": [
+    {
+      "english": "Chaitra",
+      "vedicenglish": "Chaitra",
+      "hindi": "चैत्र",
+      "telugu": "చైత్రం",
+      "kannada": "ಚೈತ್ರ"
+    },
+    {
+      "english": "Vaishakha",
+      "vedicenglish": "Vaishakha",
+      "hindi": "वैशक",
+      "telugu": "వైశాఖం",
+      "kannada": "ವೈಶಾಖ"
+    },
+    {
+      "english": "Jyeshtha",
+      "vedicenglish": "Jyeshtha",
+      "hindi": "ज्येष्ट",
+      "telugu": "జ్యేష్ఠం",
+      "kannada": "ಜ್ಯೇಷ್ಠ"
+    },
+    {
+      "english": "Aashadh",
+      "vedicenglish": "Aashadha",
+      "hindi": "आषाढ़",
+      "telugu": "ఆషాడం",
+      "kannada": "ಆಷಾಢ"
+    },
+    {
+      "english": "Shraavana",
+      "vedicenglish": "Shraavana",
+      "hindi": "श्रावण",
+      "telugu": "శ్రావణం",
+      "kannada": "ಶ್ರಾವಣ"
+    },
+    {
+      "english": "Bhadrapad",
+      "vedicenglish": "Bhadrapada",
+      "hindi": "भाद्रपद",
+      "telugu": "భద్రపదం",
+      "kannada": "ಭಾದ್ರ"
+    },
+    {
+      "english": "Ashvin",
+      "vedicenglish": "Ashvina",
+      "hindi": "आश्विन",
+      "telugu": "అశ్వినం",
+      "kannada": "ಅಶ್ವಿನ"
+    },
+    {
+      "english": "Kaartik",
+      "vedicenglish": "Kaartika",
+      "hindi": "कारतीक",
+      "telugu": "కార్తీకం",
+      "kannada": "ಕಾರ್ತಿಕ"
+    },
+    {
+      "english": "Margashirsha",
+      "vedicenglish": "Margashirsha",
+      "hindi": "मार्गशीर्ष",
+      "telugu": "మార్గశీర్షం",
+      "kannada": "ಮಾರ್ಗಶೀರ್ಷ"
+    },
+    {
+      "english": "Pushya",
+      "vedicenglish": "Pushya",
+      "hindi": "पुष्य",
+      "telugu": "పుష్యం",
+      "kannada": "ಪುಷ್ಯ"
+    },
+    {
+      "english": "Magha",
+      "vedicenglish": "Magha",
+      "hindi": "माघ",
+      "telugu": "మాఘం",
+      "kannada": "ಮಾಘ"
+    },
+    {
+      "english": "Phalgun",
+      "vedicenglish": "Phalgun",
+      "hindi": "फल्गुण",
+      "telugu": "ఫాల్గుణం",
+      "kannada": "ಫಾಲ್ಗುಣ"
+    }
+  ],
+  "vara": [
+    {
+      "english": "Sunday",
+      "vedicenglish": "Bhanuvara",
+      "hindi": "भानु",
+      "telugu": "ఆదివారం",
+      "kannada": "ಭಾನುವಾರ"
+    },
+    {
+      "english": "Monday",
+      "vedicenglish": "Somavara",
+      "hindi": "इन्दु",
+      "telugu": "సోమవారం",
+      "kannada": "ಸೋಮವಾರ"
+    },
+    {
+      "english": "Tuesday",
+      "vedicenglish": "Mangalavara",
+      "hindi": "भौम",
+      "telugu": "మంగళవారం",
+      "kannada": "ಮಂಗಳವಾರ"
+    },
+    {
+      "english": "Wednesday",
+      "vedicenglish": "Budhavara",
+      "hindi": "सौम्य",
+      "telugu": "బుధవారం",
+      "kannada": "ಬುಧವಾರ"
+    },
+    {
+      "english": "Thursday",
+      "vedicenglish": "Guruvara",
+      "hindi": "बृहस्पति",
+      "telugu": "గురువారం",
+      "kannada": "ಗುರುವಾರ"
+    },
+    {
+      "english": "Friday",
+      "vedicenglish": "Sukravara",
+      "hindi": "भार्गव",
+      "telugu": "శుక్రవారం",
+      "kannada": "ಶುಕ್ರವಾರ"
+    },
+    {
+      "english": "Saturday",
+      "vedicenglish": "Shanivara",
+      "hindi": "स्थिर",
+      "telugu": "శనివారం",
+      "kannada": "ಶನಿವಾರ"
+    }
+  ],
+  "yoga": [
+    {
+      "english": "Vishakumbha",
+      "vedicenglish": "Vishakumbha",
+      "hindi": "विष्कंब",
+      "telugu": "విష్కంభ",
+      "kannada": "ವಿಷ್ಕಂಭ"
+    },
+    {
+      "english": "Priti",
+      "vedicenglish": "Priti",
+      "hindi": "प्रीति",
+      "telugu": "ప్రీతి",
+      "kannada": "ಪ್ರೀತಿ"
+    },
+    {
+      "english": "Ayushman",
+      "vedicenglish": "Ayushman",
+      "hindi": "आयुष्मान्",
+      "telugu": "ఆయుష్మాన్",
+      "kannada": "ಆಯುಷ್ಮಾನ್"
+    },
+    {
+      "english": "Saubhagya",
+      "vedicenglish": "Saubhagya",
+      "hindi": "सौभाग्य",
+      "telugu": "సౌభాగ్య",
+      "kannada": "ಸೌಭಾಗ್ಯ"
+    },
+    {
+      "english": "Shobana",
+      "vedicenglish": "Shobana",
+      "hindi": "शॊभन",
+      "telugu": "శోభన",
+      "kannada": "ಶೋಭನ"
+    },
+    {
+      "english": "Atiganda",
+      "vedicenglish": "Atiganda",
+      "hindi": "अतिगंड",
+      "telugu": "అతిగండ",
+      "kannada": "ಅತಿಗಂಡ"
+    },
+    {
+      "english": "Sukarma",
+      "vedicenglish": "Sukarma",
+      "hindi": "सुकर्म",
+      "telugu": "సుకర్మ",
+      "kannada": "ಸುಕರ್ಮ"
+    },
+    {
+      "english": "Dhriti",
+      "vedicenglish": "Dhriti",
+      "hindi": "धृति",
+      "telugu": "ధృతి",
+      "kannada": "ಧೃತಿ"
+    },
+    {
+      "english": "Shula",
+      "vedicenglish": "Shula",
+      "hindi": "शूल",
+      "telugu": "శూల",
+      "kannada": "ಶೂಲ"
+    },
+    {
+      "english": "Ganda",
+      "vedicenglish": "Ganda",
+      "hindi": "गंड",
+      "telugu": "గండ",
+      "kannada": "ಗಂಡ"
+    },
+    {
+      "english": "Vridhi",
+      "vedicenglish": "Vridhi",
+      "hindi": "वृद्दि",
+      "telugu": "వృద్ధి",
+      "kannada": "ವೃದ್ಧಿ"
+    },
+    {
+      "english": "Dhruva",
+      "vedicenglish": "Dhruva",
+      "hindi": "धृव",
+      "telugu": "ధృవ",
+      "kannada": "ಧೃವ"
+    },
+    {
+      "english": "Vyaghata",
+      "vedicenglish": "Vyaghata",
+      "hindi": "व्याघात",
+      "telugu": "వ్యాఘాత",
+      "kannada": "ವ್ಯಾಘಾತ"
+    },
+    {
+      "english": "Harshana",
+      "vedicenglish": "Harshana",
+      "hindi": "हर्ष",
+      "telugu": "హర్ష",
+      "kannada": "ಹರ್ಷ"
+    },
+    {
+      "english": "Vajra",
+      "vedicenglish": "Vajra",
+      "hindi": "वज्र",
+      "telugu": "వజ్ర",
+      "kannada": "ವಜ್ರ"
+    },
+    {
+      "english": "Siddi",
+      "vedicenglish": "Siddi",
+      "hindi": "सिद्धि",
+      "telugu": "సిద్ధి",
+      "kannada": "ಸಿದ್ಧಿ"
+    },
+    {
+      "english": "Vyatipata",
+      "vedicenglish": "Vyatipata",
+      "hindi": "व्यतीपात",
+      "telugu": "వ్యతీపాత",
+      "kannada": "ವ್ಯತೀಪಾತ"
+    },
+    {
+      "english": "Variyan",
+      "vedicenglish": "Variyan",
+      "hindi": "वरीयन्",
+      "telugu": "వరీయన్",
+      "kannada": "ವರೀಯನ್"
+    },
+    {
+      "english": "Prigha",
+      "vedicenglish": "Prigha",
+      "hindi": "परिघ",
+      "telugu": "పరిఘ",
+      "kannada": "ಪರಿಘ"
+    },
+    {
+      "english": "Shiva",
+      "vedicenglish": "Shiva",
+      "hindi": "शिव",
+      "telugu": "శివ",
+      "kannada": "ಶಿವ"
+    },
+    {
+      "english": "Siddha",
+      "vedicenglish": "Siddha",
+      "hindi": "सिद्ध",
+      "telugu": "సిద్ధ",
+      "kannada": "ಸಿದ್ಧ"
+    },
+    {
+      "english": "Sadhya",
+      "vedicenglish": "Sadhya",
+      "hindi": "साध्य",
+      "telugu": "సాధ్య",
+      "kannada": "ಸಾಧ್ಯ"
+    },
+    {
+      "english": "Subha",
+      "vedicenglish": "Subha",
+      "hindi": "शुभ",
+      "telugu": "శుభ",
+      "kannada": "ಶುಭ"
+    },
+    {
+      "english": "Shukla",
+      "vedicenglish": "Shukla",
+      "hindi": "शुक्ल",
+      "telugu": "శుక్ల",
+      "kannada": "ಶುಕ್ಲ"
+    },
+    {
+      "english": "Brahma",
+      "vedicenglish": "Brahma",
+      "hindi": "ब्रह्म",
+      "telugu": "బ్రహ్మ",
+      "kannada": "ಬ್ರಹ್ಮ"
+    },
+    {
+      "english": "Indra",
+      "vedicenglish": "Indra",
+      "hindi": "इन्द्र",
+      "telugu": "ఇంద్ర",
+      "kannada": "ಇಂದ್ರ"
+    },
+    {
+      "english": "Vaidhriti",
+      "vedicenglish": "Vaidhriti",
+      "hindi": "वैधृति",
+      "telugu": "వైధృతి",
+      "kannada": "ವೈದೃತಿ"
+    }
+  ],
+  "karana": [
+    {
+      "english": "Bhava",
+      "vedicenglish": "Bhava",
+      "hindi": "भव",
+      "telugu": "భవ",
+      "kannada": "ಭವ"
+    },
+    {
+      "english": "Balava",
+      "vedicenglish": "Balava",
+      "hindi": "बालव",
+      "telugu": "బాలవ",
+      "kannada": "ಬಾಲವ"
+    },
+    {
+      "english": "Kaulava",
+      "vedicenglish": "Kaulava",
+      "hindi": "कौलव",
+      "telugu": "కౌలవ",
+      "kannada": "ಕೌಲವ"
+    },
+    {
+      "english": "Taitula",
+      "vedicenglish": "Taitula",
+      "hindi": "तैतुल",
+      "telugu": "తైతుల",
+      "kannada": "ತೈತುಲ"
+    },
+    {
+      "english": "Gara",
+      "vedicenglish": "Gara",
+      "hindi": "गरज",
+      "telugu": "గరజ",
+      "kannada": "ಗರಜ"
+    },
+    {
+      "english": "Vanija",
+      "vedicenglish": "Vanija",
+      "hindi": "वनिज",
+      "telugu": "వనిజ",
+      "kannada": "ವನಿಜ"
+    },
+    {
+      "english": "Vishti",
+      "vedicenglish": "Vishti",
+      "hindi": "विष्टि",
+      "telugu": "విష్టి",
+      "kannada": "ವಿಷ್ಟಿ"
+    },
+    {
+      "english": "Shakuni",
+      "vedicenglish": "Shakuni",
+      "hindi": "शकुन",
+      "telugu": "శకున",
+      "kannada": "ಶಕುನ"
+    },
+    {
+      "english": "Chatushpada",
+      "vedicenglish": "Chatushpada",
+      "hindi": "चतुष्पाद",
+      "telugu": "చతుష్పాద",
+      "kannada": "ಚತುಷ್ಪಾದ"
+    },
+    {
+      "english": "Naga",
+      "vedicenglish": "Naga",
+      "hindi": "नागव",
+      "telugu": "నాగవ",
+      "kannada": "ನಾಗವ"
+    },
+    {
+      "english": "Kinstugna",
+      "vedicenglish": "Kinstugna",
+      "hindi": "किंस्तुघ्न",
+      "telugu": "కింస్తుఘ్న",
+      "kannada": "ಕಿಂಸ್ತುಘ್ನ"
+    }
+  ],
+  "rashi": [
+    {
+      "english": "Aries",
+      "vedicenglish": "Mesha",
+      "hindi": "मेष",
+      "telugu": "మేషము",
+      "kannada": "ಮೇಷ"
+    },
+    {
+      "english": "Taurus",
+      "vedicenglish": "Vrushaba",
+      "hindi": "वृषभ",
+      "telugu": "వృషభము",
+      "kannada": "ವೃಷಭ"
+    },
+    {
+      "english": "Gemini",
+      "vedicenglish": "Mithuna",
+      "hindi": "मिथुन",
+      "telugu": "మిథునము",
+      "kannada": "ಮಿಥುನ"
+    },
+    {
+      "english": "Cancer",
+      "vedicenglish": "Karka",
+      "hindi": "कर्क",
+      "telugu": "కర్కాటకము",
+      "kannada": "ಕರ್ಕ"
+    },
+    {
+      "english": "Leo",
+      "vedicenglish": "Simha",
+      "hindi": "सिंह",
+      "telugu": "సింహము",
+      "kannada": "ಸಿಂಹ"
+    },
+    {
+      "english": "Virgo",
+      "vedicenglish": "Kanya",
+      "hindi": "कन्या",
+      "telugu": "కన్యా",
+      "kannada": "ಕನ್ಯಾ"
+    },
+    {
+      "english": "Libra",
+      "vedicenglish": "Tula",
+      "hindi": "तुला",
+      "telugu": "తుల",
+      "kannada": "ತುಲಾ"
+    },
+    {
+      "english": "Scorpio",
+      "vedicenglish": "Vruschika",
+      "hindi": "वृश्चिक",
+      "telugu": "వృశ్చికము",
+      "kannada": "ವೃಶ್ಚಿಕ"
+    },
+    {
+      "english": "Saggitarius",
+      "vedicenglish": "Dhanu",
+      "hindi": "धनुष",
+      "telugu": "ధనస్సు",
+      "kannada": "ಧನು"
+    },
+    {
+      "english": "Capricorn",
+      "vedicenglish": "Makara",
+      "hindi": "मकर",
+      "telugu": "మకరము",
+      "kannada": "ಮಕರ"
+    },
+    {
+      "english": "Aquarius",
+      "vedicenglish": "Kumbha",
+      "hindi": "कुम्भ",
+      "telugu": "కుంభము",
+      "kannada": "ಕುಂಭ"
+    },
+    {
+      "english": "Pisces",
+      "vedicenglish": "Meena",
+      "hindi": "मीन",
+      "telugu": "మీనము",
+      "kannada": "ಮೀನ"
+    }
+  ]
+}

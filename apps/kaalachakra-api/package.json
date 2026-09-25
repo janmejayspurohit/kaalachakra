@@ -1,0 +1,27 @@
+{
+  "name": "@kaalachakra/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Fastify API for Kaalachakra. Panchanga, profiles, matrimony matching.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test test/",
+    "build": "echo \"no build step\""
+  },
+  "dependencies": {
+    "@kaalachakra/ganita": "workspace:*",
+    "@fastify/cors": "^10.0.1",
+    "@fastify/swagger": "^9.4.0",
+    "@fastify/swagger-ui": "^5.2.0",
+    "fastify": "^5.2.0",
+    "@kaalachakra/places": "workspace:*",
+    "@kaalachakra/shared": "workspace:*"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

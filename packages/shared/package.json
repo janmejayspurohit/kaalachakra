@@ -1,0 +1,11 @@
+{
+  "name": "@kaalachakra/shared",
+  "version": "0.1.0",
+  "description": "Localisation tables (english, vedicenglish, hindi, telugu, kannada) extracted from Ahoratra's AHLocalize.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js", "./locale.json": "./src/locale.json" },
+  "scripts": { "test": "node --test test/", "build": "echo \"no build step\"" },
+  "engines": { "node": ">=22" }
+}

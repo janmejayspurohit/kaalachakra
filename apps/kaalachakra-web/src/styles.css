@@ -1,0 +1,1225 @@
+/*
+ * Kaalachakra visual language.
+ *
+ * Tokens on :root, redefined for dark mode. Palette leans on the sandalwood /
+ * kumkuma / indigo range a Kannada panchanga actually uses in print, rather
+ * than generic dashboard blue.
+ */
+:root {
+  --bg: #fbf7f0;
+  --surface: #ffffff;
+  --surface-2: #f4ece0;
+  --border: #e3d7c5;
+  --text: #241d16;
+  --text-dim: #6b5d4c;
+  --accent: #8c2f1d;         /* kumkuma */
+  --accent-soft: #f6e5e0;
+  --indigo: #2f3a6b;
+  --gold: #a87c1f;
+
+  --ok: #1f6d3a;
+  --ok-bg: #e5f3e9;
+  --warn: #8a6100;
+  --warn-bg: #fbf0d8;
+  --bad: #9c2323;
+  --bad-bg: #fbe6e6;
+  --neutral: #4a5568;
+  --neutral-bg: #eef1f5;
+  --info: #2f6fbf;
+  --info-bg: #e7eefa;
+
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(36, 29, 22, .06), 0 4px 14px rgba(36, 29, 22, .05);
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14110d;
+    --surface: #1d1913;
+    --surface-2: #26201a;
+    --border: #3a3128;
+    --text: #f0e8dc;
+    --text-dim: #a2917c;
+    --accent: #e0755c;
+    --accent-soft: #3a211b;
+    --indigo: #8f9bd4;
+    --gold: #d6a743;
+
+    --ok: #6ede96;   --ok-bg: #16301f;
+    --warn: #e8be5e; --warn-bg: #33280f;
+    --bad: #f08a8a;  --bad-bg: #351818;
+    --neutral: #a8b4c4; --neutral-bg: #232830;
+    --info: #7aa8f0; --info-bg: #18233c;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14110d; --surface: #1d1913; --surface-2: #26201a; --border: #3a3128;
+  --text: #f0e8dc; --text-dim: #a2917c; --accent: #e0755c; --accent-soft: #3a211b;
+  --indigo: #8f9bd4; --gold: #d6a743;
+  --ok: #6ede96; --ok-bg: #16301f; --warn: #e8be5e; --warn-bg: #33280f;
+  --bad: #f08a8a; --bad-bg: #351818; --neutral: #a8b4c4; --neutral-bg: #232830;
+  --info: #7aa8f0; --info-bg: #18233c;
+}
+
+* { box-sizing: border-box; }
+
+/* No element may widen the document. A sideways-scrolling page reads as a
+   rendering fault; individual scrollable regions read as intentional. */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* STICKY FOOTER: on a short page the footer sits at the bottom of the
+   viewport instead of floating halfway up with dead space beneath it; on a
+   long page it just scrolls with the content.
+   The flex chain has to run through #root, because React mounts there and it
+   would otherwise be a plain block between body and the layout. `margin-top:
+   auto` on the footer is what pushes it down when there is room to spare -
+   flex-grow on the main region alone would stretch the CARDS rather than the
+   gap. */
+html, body, #root { min-height: 100vh; }
+#root { display: flex; flex-direction: column; }
+/* `width: 100%` is load-bearing, not belt-and-braces.
+   As a flex item of the column-flex #root, `.wrap`'s own `margin: 0 auto`
+   suppresses the default cross-axis stretch, so it shrink-wrapped to its
+   CONTENT instead of filling the line. Tabs whose content happened to reach
+   the 1120px cap looked unchanged; Matrimony and Profiles, whose content is
+   narrower, rendered at 894px and 760px. The max-width still caps it and the
+   auto margins still centre it. */
+.wrap { flex: 1 0 auto; width: 100%; }
+/* `.site-footer` gets `margin-top: auto` in its own block further down - put
+   here it would be overridden by the `margin-top: 40px` declared there, and
+   the footer would silently stop sticking. */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px 64px; }
+
+/* ---- header ---- */
+header.top {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky; top: 0; z-index: 20;
+}
+.top-inner {
+  max-width: 1120px; margin: 0 auto; padding: 12px 16px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+/* The brand is a <button> so it is keyboard-reachable; these rules strip the
+   button chrome so it still reads as a wordmark rather than a control. */
+.brand {
+  font-weight: 700; font-size: 19px; letter-spacing: -.02em;
+  font-family: inherit; color: inherit;
+  background: none; border: 0; padding: 0;
+  text-align: left; cursor: pointer;
+}
+.brand:hover { color: var(--accent); }
+.brand:hover small { color: var(--text-dim); }
+.brand small { color: var(--text-dim); font-weight: 400; font-size: 12px; display: block; letter-spacing: 0; }
+
+nav.tabs { display: flex; gap: 2px; margin-left: auto; flex-wrap: wrap; }
+nav.tabs button {
+  background: none; border: 1px solid transparent; color: var(--text-dim);
+  padding: 7px 13px; border-radius: 8px; cursor: pointer; font-size: 14px;
+  font-family: inherit;
+}
+nav.tabs button:hover { background: var(--surface-2); color: var(--text); }
+nav.tabs button[aria-current="page"] {
+  background: var(--accent-soft); color: var(--accent); font-weight: 600;
+}
+
+/* ---- cards ---- */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px;
+}
+.card + .card { margin-top: 16px; }
+.card h2 { margin: 0 0 14px; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-dim); }
+.card h3 { margin: 0 0 10px; font-size: 14px; }
+
+.grid { display: grid; gap: 16px; }
+@media (min-width: 860px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 860px) { .grid.side { grid-template-columns: 1.55fr 1fr; align-items: start; } }
+
+/* ---- anga tiles ---- */
+.angas { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); }
+.anga {
+  background: var(--surface-2); border-radius: 8px; padding: 12px 13px;
+  border: 1px solid var(--border);
+}
+.anga .label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-dim); }
+.anga .value { font-size: 19px; font-weight: 650; margin-top: 3px; line-height: 1.2; }
+.anga .kn { font-size: 14px; color: var(--accent); margin-top: 1px; }
+.anga .until { font-size: 12px; color: var(--text-dim); margin-top: 5px; font-family: var(--mono); }
+
+/* ---- key/value rows ---- */
+.kv { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.kv:last-child { border-bottom: 0; }
+.kv dt { color: var(--text-dim); margin: 0; }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 13px; text-align: right; }
+
+/* ---- severity ---- */
+.sev { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; }
+.sev.ok, .sev.good { background: var(--ok-bg); color: var(--ok); }
+.sev.warn, .sev.caution { background: var(--warn-bg); color: var(--warn); }
+.sev.bad, .sev.error { background: var(--bad-bg); color: var(--bad); }
+.sev.neutral { background: var(--neutral-bg); color: var(--neutral); }
+
+.hl { display: flex; gap: 9px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.hl:last-child { border-bottom: 0; }
+.dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex: none; }
+.dot.good { background: var(--ok); } .dot.warn, .dot.caution { background: var(--warn); }
+.dot.bad { background: var(--bad); } .dot.neutral { background: var(--neutral); }
+
+/* ---- forms ---- */
+label.f { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 4px; }
+input, select, textarea, button.btn {
+  font: inherit; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; width: 100%;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+/* Buttons and links had no focus style of their own, so they fell back to the
+   browser's blue ring - which is a colour from no theme in this app, and was
+   glaring the moment a dialog started focusing its Cancel button on open.
+   `:focus-visible` rather than `:focus`, so the ring appears for keyboard
+   navigation and not on every mouse click. */
+button:focus-visible,
+/* Links had NO colour of their own anywhere in this app, so every one of them
+   rendered in the browser's default blue - a colour from none of the ten
+   themes. It went unnoticed because until the licences page there were almost
+   no links outside the tab bar. */
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { color: var(--text); }
+
+a:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 7px;
+}
+.row { display: grid; gap: 10px; }
+@media (min-width: 640px) { .row.c2 { grid-template-columns: 1fr 1fr; } .row.c3 { grid-template-columns: 1fr 1fr 1fr; } }
+.row + .row { margin-top: 10px; }
+
+button.btn { cursor: pointer; width: auto; }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+button.danger { color: var(--bad); border-color: var(--bad); background: transparent; }
+button.ghost { background: transparent; }
+.actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+
+/* ---- date bar ---- */
+.datebar { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
+.datebar .grow { flex: 1 1 200px; }
+
+/* ---- tables ---- */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-dim); padding: 6px 8px; border-bottom: 1px solid var(--border); font-weight: 600; }
+td { padding: 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+.num { font-family: var(--mono); text-align: right; }
+
+/* ---- kaala bar ---- */
+.bar { position: relative; height: 34px; background: var(--surface-2); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+.bar .seg { position: absolute; top: 0; bottom: 0; opacity: .85; }
+/* Validated muted palette - see KAALA_COLOURS in Panchanga.jsx for the
+   separation figures. Kept in sync with that map by hand; if you change one,
+   change both. */
+.bar .seg.rahu      { background: #cb7d4e; }
+.bar .seg.gulika    { background: #3468a8; }
+.bar .seg.yamaganda { background: #a37fd0; }
+.bar .seg.abhijit   { background: #3ba590; }
+/* A 2px surface gap between adjacent fills keeps two touching windows from
+   reading as one band. */
+.bar .seg { box-shadow: 0 0 0 1.5px var(--surface-2); border-radius: 3px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; }
+
+/* ---- dasha timeline ---- */
+.tl { position: relative; }
+.tl-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.tl-label { width: 74px; flex: none; font-size: 13px; font-weight: 600; text-transform: capitalize; }
+.tl-track { flex: 1; height: 26px; background: var(--surface-2); border-radius: 5px; position: relative; border: 1px solid var(--border); }
+.tl-seg { position: absolute; top: 0; bottom: 0; border-radius: 4px; cursor: help; }
+.tl-now { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--accent); z-index: 5; }
+
+.muted { color: var(--text-dim); font-size: 13px; }
+.mono { font-family: var(--mono); }
+.empty { text-align: center; padding: 40px 20px; color: var(--text-dim); }
+.err { background: var(--bad-bg); color: var(--bad); padding: 10px 12px; border-radius: 8px; font-size: 14px; margin-bottom: 14px; }
+.notice { background: var(--warn-bg); color: var(--warn); padding: 10px 12px; border-radius: 8px; font-size: 13px; }
+.pill { font-size: 11px; padding: 2px 7px; border-radius: 999px; background: var(--surface-2); color: var(--text-dim); border: 1px solid var(--border); }
+
+/* ---- header clock ----
+   Absolutely centred on the header rather than placed between the brand and
+   the tabs, so it stays centred regardless of how wide those two become.
+   `.top-inner` is the positioning context. Below 900px it returns to normal
+   flow, because an absolutely centred element would sit on top of the tabs. */
+.top-inner { position: relative; }
+
+.clock {
+  text-align: center;
+  line-height: 1.15;
+  pointer-events: none;
+}
+.clock-time {
+  font-family: var(--mono);
+  /* Tabular figures keep every digit the same width, so a centred clock does
+     not jitter sideways ~60 times a second as the milliseconds change. */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--text);
+}
+.clock-date {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: .02em;
+  margin-top: 1px;
+}
+
+/* Absolute centring collided with the tab row once a sixth tab was added:
+   the clock sat on top of "Panchanga". A three-column grid centres the clock
+   in its own track instead, so it can never overlap either neighbour. */
+/* Absolute centring collided with the tab row once a sixth tab was added: the
+   clock sat on top of "Panchanga". A symmetric `1fr auto 1fr` then forced the
+   tabs to wrap, because an equal share was narrower than the six tabs need.
+   `auto 1fr auto` gives the brand and the tabs their natural widths and
+   centres the clock in whatever is left, so it can neither overlap nor wrap. */
+@media (min-width: 1000px) {
+  .top-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .brand { grid-column: 1; }
+  .clock { grid-column: 2; justify-self: center; }
+  nav.tabs { grid-column: 3; justify-self: end; margin-left: 0; flex-wrap: nowrap; }
+}
+@media (max-width: 899px) {
+  .clock { margin-left: auto; text-align: right; }
+  .clock-time { font-size: 15px; }
+  nav.tabs { margin-left: 0; width: 100%; }
+}
+
+/* ---- month grid ----
+   Jerry's component referenced these class names but the stylesheet had no
+   rules for them, so the grid rendered as unstyled text. */
+.month-toggle { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 12px; }
+.month-toggle button { padding: 5px 11px; font-size: 13px; }
+
+.cell {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 8px 8px;
+  min-height: 88px;
+  cursor: pointer;
+  transition: border-color .12s, transform .12s;
+}
+.cell:hover { border-color: var(--accent); transform: translateY(-1px); }
+.cell.blank { background: transparent; border-color: transparent; cursor: default; min-height: 0; }
+.cell.blank:hover { transform: none; }
+
+.day-number { font-family: var(--mono); font-size: 15px; font-weight: 650; line-height: 1.1; }
+.tithi-name { font-size: 12px; color: var(--text-dim); margin-top: 3px; line-height: 1.2; }
+.kannada-tithi { font-size: 12px; margin-top: 1px; line-height: 1.25; }
+
+.markers { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 5px; }
+.marker {
+  font-size: 9px; font-weight: 700; letter-spacing: .03em;
+  padding: 1px 5px; border-radius: 999px; line-height: 1.5;
+  background: var(--neutral-bg); color: var(--neutral);
+}
+.marker.m-ekadashi    { background: var(--accent-soft); color: var(--accent); }
+.marker.m-purnima     { background: var(--warn-bg);    color: var(--warn); }
+.marker.m-amavasya    { background: var(--neutral-bg); color: var(--neutral); }
+.marker.m-aradhana    { background: var(--ok-bg);      color: var(--ok); }
+.marker.m-chaturmasya { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
+
+.weekday-header {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--text-dim); font-weight: 600; padding: 0 0 4px 2px;
+}
+
+/* ---- day modal ---- */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(0, 0, 0, .55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px; overflow-y: auto;
+}
+.modal-overlay > .card { max-width: 560px; width: 100%; max-height: 88vh; overflow-y: auto; }
+
+/* The dialog itself takes focus when it opens, so it gets a focus ring by
+   default. That ring belongs on the controls inside it, not on the box. */
+.modal-card:focus { outline: none; }
+.modal-card { animation: modal-in .12s ease-out; }
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(6px) scale(.99); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal-card { animation: none; }
+}
+
+.modal-title { margin-top: 0; }
+.modal-body > :first-child { margin-top: 0; }
+.modal-body > :last-child { margin-bottom: 0; }
+
+/* Actions sit at the end of the row, cancel first, so the destructive button
+   is not where a reflexive click lands. */
+.modal-actions {
+  display: flex; justify-content: flex-end; gap: 8px;
+  margin-top: 16px; padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 420px) {
+  /* Stacked on a phone, confirm on top, because the thumb rests at the
+     bottom of the screen and that is where Cancel should be. */
+  .modal-actions { flex-direction: column-reverse; }
+  .modal-actions .btn { width: 100%; }
+}
+
+/* ==========================================================================
+   THEMES
+   Selected by data-theme on <html>, set by SettingsProvider. Each theme
+   redefines the same token set, so no component needs to know which is active.
+   The media-query block above still governs the initial paint before the
+   provider mounts, which avoids a flash of the wrong palette.
+   ========================================================================== */
+
+/* ---- Light: sandalwood (the original light palette) ---- */
+:root[data-theme="light"] {
+  --bg: #fbf7f0; --surface: #ffffff; --surface-2: #f4ece0; --border: #e3d7c5;
+  --text: #241d16; --text-dim: #6b5d4c;
+  --accent: #8c2f1d; --accent-soft: #f6e5e0; --indigo: #2f3a6b; --gold: #a87c1f;
+  --ok: #1f6d3a; --ok-bg: #e5f3e9; --warn: #8a6100; --warn-bg: #fbf0d8;
+  --bad: #9c2323; --bad-bg: #fbe6e6; --neutral: #4a5568; --neutral-bg: #eef1f5;
+  --shadow: 0 1px 2px rgba(36,29,22,.06), 0 4px 14px rgba(36,29,22,.05);
+  --info: #2f6fbf; --info-bg: #e7eefa;
+}
+
+/* ---- Light: paper & indigo ---- */
+:root[data-theme="light-cool"] {
+  --bg: #f7f8fb; --surface: #ffffff; --surface-2: #eef1f7; --border: #d9dfeb;
+  --text: #1a1f2b; --text-dim: #5d6779;
+  --accent: #2f3a6b; --accent-soft: #e3e7f5; --indigo: #2f3a6b; --gold: #9a7b1c;
+  --ok: #18683c; --ok-bg: #e2f2e8; --warn: #8a6100; --warn-bg: #fbf1da;
+  --bad: #9c2323; --bad-bg: #fbe6e6; --neutral: #4a5568; --neutral-bg: #e9edf4;
+  --shadow: 0 1px 2px rgba(26,31,43,.06), 0 4px 14px rgba(26,31,43,.06);
+  --info: #2f6fbf; --info-bg: #e7eefa;
+}
+
+/* ---- Dark: kumkuma (the original dark palette) ---- */
+:root[data-theme="dark"] {
+  --bg: #14110d; --surface: #1d1913; --surface-2: #26201a; --border: #3a3128;
+  --text: #f0e8dc; --text-dim: #a2917c;
+  --accent: #e0755c; --accent-soft: #3a211b; --indigo: #8f9bd4; --gold: #d6a743;
+  --ok: #6ede96; --ok-bg: #16301f; --warn: #e8be5e; --warn-bg: #33280f;
+  --bad: #f08a8a; --bad-bg: #351818; --neutral: #a8b4c4; --neutral-bg: #232830;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+}
+
+/* ---- Light: haridra & kumkuma (turmeric and vermilion) ----
+   The pair handed out at every auspicious gathering. Turmeric carries the
+   surfaces, vermilion the accent - which is the order they appear in, not the
+   reverse: kumkuma is a mark, never a field. */
+:root[data-theme="light-haridra"] {
+  --bg: #fdf9ec; --surface: #ffffff; --surface-2: #f7edd3; --border: #e4d3a6;
+  --text: #241d10; --text-dim: #6b5a32;
+  --accent: #a82d1a; --accent-soft: #fae3de; --indigo: #2f3a6b; --gold: #9a7409;
+  --ok: #1f6d3a; --ok-bg: #e5f3e9; --warn: #8a6100; --warn-bg: #fbf0d8;
+  --bad: #9c2323; --bad-bg: #fbe6e6; --neutral: #4a5568; --neutral-bg: #eef1f5;
+  --info: #2f6fbf; --info-bg: #e7eefa;
+  --shadow: 0 1px 2px rgba(36,29,16,.06), 0 4px 14px rgba(36,29,16,.05);
+}
+
+/* ---- Light: kamala (the lotus) ----
+   Padma pink over white, with gold. The lotus is the seat, so the pink stays
+   in the surfaces and the accent is the deeper rose of the flower's throat. */
+:root[data-theme="light-kamala"] {
+  --bg: #fdf6f8; --surface: #ffffff; --surface-2: #f8e9ef; --border: #ecd0dc;
+  --text: #251820; --text-dim: #6c525d;
+  --accent: #a3265a; --accent-soft: #fae1ea; --indigo: #3b3a72; --gold: #a07a1c;
+  --ok: #1f6d3a; --ok-bg: #e5f3e9; --warn: #8a6100; --warn-bg: #fbf0d8;
+  --bad: #9c2323; --bad-bg: #fbe6e6; --neutral: #4a5568; --neutral-bg: #eef1f5;
+  --info: #2f6fbf; --info-bg: #e7eefa;
+  --shadow: 0 1px 2px rgba(37,24,32,.06), 0 4px 14px rgba(37,24,32,.05);
+}
+
+/* ---- Light: vibhuti (sacred ash and saffron) ----
+   The quietest of the light themes by design: ash greys throughout, with a
+   single saffron accent. Where the other two are warm all over, this one
+   holds its colour back for the one element that needs it. */
+:root[data-theme="light-vibhuti"] {
+  --bg: #f6f6f4; --surface: #ffffff; --surface-2: #eaeae6; --border: #d6d6d0;
+  --text: #1f1f1d; --text-dim: #5b5b55;
+  --accent: #b05610; --accent-soft: #fbe9d8; --indigo: #3a4468; --gold: #8f7420;
+  --ok: #1f6d3a; --ok-bg: #e5f3e9; --warn: #8a6100; --warn-bg: #fbf0d8;
+  --bad: #9c2323; --bad-bg: #fbe6e6; --neutral: #4a5568; --neutral-bg: #eef1f5;
+  --info: #2f6fbf; --info-bg: #e7eefa;
+  --shadow: 0 1px 2px rgba(31,31,29,.06), 0 4px 14px rgba(31,31,29,.05);
+}
+
+/* ---- Dark: mayura (the peacock) ----
+   Krishna's feather: deep teal ground, peacock green-blue accent, a gold eye.
+   The only cool-dark theme that is not blue - tulasi is green and
+   midnight-gold is indigo, and this sits between them. */
+:root[data-theme="dark-mayura"] {
+  --bg: #07161a; --surface: #0e2229; --surface-2: #143139; --border: #22505c;
+  --text: #e0f1f2; --text-dim: #8dafb5;
+  --accent: #2fc2b4; --accent-soft: #0d3a38; --indigo: #8f9bd4; --gold: #e0b44a;
+  --ok: #5fd98a; --ok-bg: #0f2e1e; --warn: #e8c05e; --warn-bg: #2d2610;
+  --bad: #f08a8a; --bad-bg: #331a1a; --neutral: #9fb4bb; --neutral-bg: #16262c;
+  --info: #7ab6f0; --info-bg: #122a3e;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 4px 14px rgba(0,0,0,.35);
+}
+
+/* ---- Dark: kesari (saffron on charcoal) ----
+   The ochre of sannyasa against ash-dark surfaces. Warmer than kumkuma and
+   more orange than gold, so it reads as its own theme rather than a shade of
+   the default dark one. */
+:root[data-theme="dark-kesari"] {
+  --bg: #121110; --surface: #1b1a17; --surface-2: #252220; --border: #3a3531;
+  --text: #f3ece2; --text-dim: #a1968a;
+  --accent: #f0913a; --accent-soft: #3a2513; --indigo: #8f9bd4; --gold: #e8c05e;
+  --ok: #6ede96; --ok-bg: #16301f; --warn: #e8be5e; --warn-bg: #33280f;
+  --bad: #f08a8a; --bad-bg: #351818; --neutral: #a8b4c4; --neutral-bg: #232830;
+  --info: #7aa8f0; --info-bg: #18233c;
+  --shadow: 0 1px 2px rgba(0,0,0,.42), 0 4px 14px rgba(0,0,0,.32);
+}
+
+/* ---- Dark: tulasi green ---- */
+:root[data-theme="dark-forest"] {
+  --bg: #0d1310; --surface: #141c17; --surface-2: #1b241e; --border: #2b3830;
+  --text: #e4efe7; --text-dim: #8fa697;
+  --accent: #7fd6a2; --accent-soft: #16301f; --indigo: #8f9bd4; --gold: #d6a743;
+  --ok: #6ede96; --ok-bg: #16301f; --warn: #e8be5e; --warn-bg: #2f2810;
+  --bad: #f08a8a; --bad-bg: #331a1a; --neutral: #a8b4c4; --neutral-bg: #212a25;
+  --shadow: 0 1px 2px rgba(0,0,0,.45), 0 4px 14px rgba(0,0,0,.32);
+  --info: #7aa8f0; --info-bg: #18233c;
+}
+
+/* ---- Midnight blue & gold ----
+   Deep navy ground with a warm gold accent. Gold is used for emphasis and
+   figures rather than as a body colour: at body size it reads as low-contrast
+   yellow on navy, so --text stays a near-white and --gold carries the accent. */
+:root[data-theme="midnight-gold"] {
+  --bg: #040711; --surface: #080d1b; --surface-2: #0b1226; --border: #141b33;
+  --text: #e8ecf8; --text-dim: #8b99bd;
+  --accent: #e8b448; --accent-soft: #19160b;
+  --indigo: #8fa5e8; --gold: #e8b448;
+  --ok: #6fd79b; --ok-bg: #0e2718; --warn: #e8c05e; --warn-bg: #27210f;
+  --bad: #f18b8b; --bad-bg: #2e161b; --neutral: #a3b1d4; --neutral-bg: #0e142a;
+  --shadow: 0 1px 2px rgba(0,0,0,.5), 0 4px 18px rgba(0,0,0,.4);
+  --info: #7aa8f0; --info-bg: #18233c;
+}
+:root[data-theme="midnight-gold"] nav.tabs button[aria-current="page"] {
+  background: var(--accent-soft); color: var(--gold);
+}
+/* Gold is light, so primary buttons need dark text on it. */
+:root[data-theme="midnight-gold"] button.primary { color: #171100; }
+
+/* Swatches for the theme picker. */
+.swatches { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+.swatch {
+  border: 1px solid var(--border); border-radius: 10px; padding: 9px 11px;
+  cursor: pointer; text-align: left; width: auto;
+  display: flex; align-items: center; gap: 9px;
+  /* `.swatch` is not `.btn`, so it never picked up the shared control colours
+     and fell back to the user-agent default - black text, invisible on a dark
+     surface. Both are set explicitly here. */
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+}
+.swatch:hover { border-color: var(--text-dim); }
+.swatch[aria-pressed="true"] { border-color: var(--accent); outline: 1px solid var(--accent); }
+.swatch .dots { display: flex; gap: 3px; }
+.swatch .dots i { width: 13px; height: 13px; border-radius: 50%; display: block; }
+.swatch span.name { font-size: 13px; }
+
+/* ==========================================================================
+   MOBILE
+   Phone-first adjustments. The app is dense by nature - a panchanga is a
+   table - so the strategy is: let wide tables scroll horizontally inside
+   their card rather than squeezing columns to illegibility, and collapse the
+   multi-column layouts to one column.
+   ========================================================================== */
+
+/* Tables are the main overflow risk.
+   MEASURED: making the CARD the scroll container did not work - a table with
+   `min-width: 460px` stretched the card itself to 490px on a 485px viewport,
+   so the whole page scrolled sideways and every card was clipped.
+   The table must be its own scroll container instead: `display: block` takes
+   it out of the card's width calculation entirely, so the card can never be
+   widened by it. */
+@media (max-width: 720px) {
+  .card { overflow-x: hidden; }
+  .card table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  .card table thead, .card table tbody { display: table; width: 100%; min-width: 420px; }
+}
+
+@media (max-width: 720px) {
+  .wrap { padding: 0 12px 48px; }
+  .card { padding: 14px; border-radius: 9px; }
+  .card h2 { font-size: 13px; }
+
+  /* Header: brand left, clock right, tabs on their own scrollable row. */
+  .top-inner { padding: 10px 12px; gap: 10px; }
+  .brand { font-size: 17px; }
+  .brand small { font-size: 11px; }
+
+  nav.tabs {
+    width: 100%;
+    margin-left: 0;
+    order: 3;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 2px;
+    /* Hide the scrollbar but keep the scrolling - a visible bar under five
+       tabs looks like a rendering fault on a phone. */
+    scrollbar-width: none;
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  nav.tabs button { flex: 0 0 auto; padding: 6px 11px; font-size: 13px; }
+
+  /* Date bar stacks; the prev/next/today buttons share a row. */
+  .datebar { gap: 8px; }
+  .datebar .grow { flex: 1 1 100%; }
+  .datebar > button.btn { flex: 1 1 auto; }
+
+  /* Anga tiles: two across rather than one, they are short enough. */
+  .angas { grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 8px; }
+  .anga { padding: 10px; }
+  .anga .value { font-size: 17px; }
+
+  /* Key/value rows wrap instead of colliding when the value is long. */
+  .kv { flex-wrap: wrap; gap: 2px 12px; }
+  .kv dd { text-align: left; }
+
+  /* Month grid: keep 7 columns (a week must stay a week) but shrink the cell. */
+  .cell { min-height: 66px; padding: 5px 5px 6px; }
+  .day-number { font-size: 13px; }
+  .tithi-name, .kannada-tithi { font-size: 10px; }
+  .marker { font-size: 8px; padding: 0 4px; }
+  .month-toggle button { padding: 5px 9px; font-size: 12px; }
+  .weekday-header { font-size: 10px; letter-spacing: .04em; }
+
+  /* Dasha timeline: the label column eats too much width on a phone. */
+  .tl-label { width: 52px; font-size: 11px; }
+  .tl-track { height: 22px; }
+
+  .legend { gap: 8px 12px; font-size: 11px; }
+  .swatch { width: 100%; }
+
+  /* Modal fills the screen with a little inset rather than floating small. */
+  .modal-overlay { padding: 10px; align-items: flex-start; }
+  .modal-overlay > .card { max-height: 92vh; }
+}
+
+/* Very narrow phones. */
+@media (max-width: 380px) {
+  .angas { grid-template-columns: 1fr 1fr; }
+  .cell { min-height: 58px; }
+  .kannada-tithi { display: none; }  /* keep the cell readable at 320px */
+  .clock-time { font-size: 14px; }
+  .clock-date { font-size: 10px; }
+}
+
+/* Inputs must never be smaller than 16px on iOS or Safari zooms the page on
+   focus, which silently breaks the layout for the rest of the session. */
+@media (max-width: 720px) {
+  input, select, textarea { font-size: 16px; }
+}
+
+/* ---- month grid loading states ----
+   The grid must never collapse to a one-line spinner and back: that resize is
+   what makes month navigation feel like the page is jumping. While a month is
+   in flight the previous grid stays put and is dimmed; only the very first
+   load (when there is nothing to keep) shows a skeleton of the same shape. */
+.month-grid { transition: opacity .18s ease; }
+.month-grid.is-stale { opacity: .45; pointer-events: none; }
+
+.cell.skeleton {
+  background: var(--surface-2);
+  border-color: var(--border);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.cell.skeleton::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.25s infinite;
+}
+@keyframes shimmer { to { transform: translateX(100%); } }
+
+/* Reserve the grid's height so even the skeleton does not change the card
+   size when real rows replace it. */
+.month-grid { min-height: 460px; align-content: start; }
+@media (max-width: 720px) { .month-grid { min-height: 360px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .cell.skeleton::after { animation: none; }
+  .month-grid { transition: none; }
+}
+
+/* ---- offline map pin ---- */
+.mappin {
+  display: block; border: 1px solid var(--border); border-radius: 9px;
+  background: var(--surface-2);
+  /* An open hand, because panning is the gesture you make on this surface
+     nearly every time; a crosshair advertised precision placement, which is
+     the rarer of the two actions and is what a plain click already does.
+     `grabbing` while the pointer is down so the drag has an end as well as a
+     start. */
+  cursor: grab;
+  /* Belt and braces alongside the non-passive wheel listener: stop any scroll
+     chaining from reaching the page if a gesture does slip through. */
+  overscroll-behavior: contain;
+}
+.mappin:active { cursor: grabbing; }
+/* Contrast matters more than subtlety here: the outlines are the only thing
+   telling you where the pin is, so states read as a clear silhouette against
+   the frame and neighbours stay recessive. */
+.map-context { fill: var(--text-dim); opacity: .18; stroke: none; }
+.map-state {
+  fill: var(--surface);
+  stroke: var(--text-dim);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  opacity: 1;
+}
+.mappin:hover .map-state { stroke: var(--text); }
+.map-cross { stroke: var(--accent); stroke-width: 1.6; opacity: .8; }
+.map-pin-dot { fill: var(--accent); stroke: var(--surface); stroke-width: 2.5; }
+.map-pin { pointer-events: none; }
+
+/* ---- date field ---- */
+.datefield { position: relative; }
+.datefield-trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; cursor: pointer; font: inherit; text-align: left;
+  color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;
+}
+.datefield-trigger:hover { border-color: var(--text-dim); }
+.datefield-icon { color: var(--text-dim); font-size: 11px; }
+
+.datefield-pop {
+  position: absolute; z-index: 40; top: calc(100% + 6px); left: 0;
+  width: 290px; padding: 12px; box-shadow: var(--shadow);
+}
+.datefield-head { display: flex; align-items: center; gap: 4px; margin-bottom: 10px; }
+.datefield-head button.btn { padding: 4px 8px; }
+.datefield-title { display: flex; gap: 6px; flex: 1; }
+/* A flex item's default `min-width: auto` still lets a <select> be squeezed
+   below its content when the row is tight, which is how the month name came
+   to be clipped in the first place. Give it a floor it cannot go under. */
+.datefield-title select { padding: 5px 6px; font-size: 13px; flex: 1 1 auto; min-width: 64px; }
+.datefield-title input { padding: 5px 6px; font-size: 13px; width: 72px; }
+
+.datefield-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.datefield-wd {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--text-dim); text-align: center; padding-bottom: 4px;
+}
+.datefield-day {
+  font: inherit; font-size: 13px; padding: 6px 0; width: 100%;
+  background: transparent; color: var(--text);
+  border: 1px solid transparent; border-radius: 6px; cursor: pointer;
+}
+.datefield-day:hover { background: var(--surface-2); }
+.datefield-day.is-today { border-color: var(--text-dim); }
+.datefield-day.is-selected {
+  background: var(--accent); color: var(--surface); font-weight: 650;
+}
+.datefield-foot { margin-top: 8px; display: flex; justify-content: flex-end; }
+
+@media (max-width: 720px) {
+  /* A 290px popup can overflow a 320px screen once the field is inset. */
+  .datefield-pop { width: min(290px, calc(100vw - 48px)); }
+}
+
+/* ---- map: zoom controls, cities, claimed territory ---- */
+.mapwrap { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+/* The map and its controls are one object, so the frame is the positioning
+   context and the controls float inside it rather than sitting in the
+   document above it. Above the map they were detached from the thing they
+   act on and, at the left edge, a long way from where the cursor already is. */
+.map-frame { position: relative; display: inline-block; max-width: 100%; }
+/* An inline SVG sits on the text baseline, leaving a strip of descender space
+   under it that the absolutely-positioned control bar would float over. */
+.map-frame > svg { display: block; }
+
+.map-tools {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 4px; align-items: center;
+  padding: 4px 6px;
+  border-radius: 999px;
+  /* Its own surface, so the buttons stay legible over coastline, label or
+     empty sea - the map underneath is not a predictable background. */
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,.3));
+  /* The bar is a control; the map behind it still owns the drag and wheel. */
+  z-index: 2;
+}
+.map-tools button.btn { padding: 3px 10px; font-size: 13px; line-height: 1.4; }
+
+/* A switch, not a pressed button. A button that stays lit is ambiguous - it
+   reads as "click to show cities" just as easily as "cities are shown" - and
+   the only fix is a control whose two states are physically different rather
+   than differently coloured. The knob's position carries the state, so it
+   survives a colourblind reader and a forced-colours mode; the tint is
+   confirmation, not the signal. */
+.map-switch {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 2px 8px 2px 4px;
+  background: none; border: 1px solid transparent; border-radius: 999px;
+  color: var(--text-dim);
+  font: inherit; font-size: 13px; line-height: 1.4;
+  cursor: pointer;
+}
+.map-switch:hover { color: var(--text); }
+.map-switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.map-switch-track {
+  position: relative;
+  width: 26px; height: 15px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  transition: background .14s ease, border-color .14s ease;
+}
+.map-switch-knob {
+  position: absolute; top: 1px; left: 1px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  transition: transform .14s ease, background .14s ease;
+}
+.map-switch.is-on { color: var(--text); }
+.map-switch.is-on .map-switch-track {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.map-switch.is-on .map-switch-knob {
+  transform: translateX(11px);
+  background: var(--accent);
+}
+
+/* Respect a reader who has asked the system for less motion: the knob still
+   moves, it just arrives immediately. */
+@media (prefers-reduced-motion: reduce) {
+  .map-switch-track, .map-switch-knob { transition: none; }
+}
+.map-tools .mono { padding: 0 4px; }
+
+.map-city-dot { fill: var(--text-dim); }
+.map-city-label {
+  fill: var(--text);
+  /* Halo the label so it stays readable where it crosses a border or the
+     coastline. paint-order puts the stroke behind the glyph. */
+  stroke: var(--surface);
+  paint-order: stroke fill;
+  pointer-events: none;
+  font-family: inherit;
+}
+
+/* Dragging to pan is a drag gesture over text, and the browser reads that as
+   a text selection: every label in the frame lit up with the selection
+   highlight - a blue box behind each name that looked like a styling bug and
+   was really the map selecting itself. The gesture is panning, never text
+   selection, so the map opts out of it entirely. */
+.mappin, .mappin text {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Areas India claims that Natural Earth files under a neighbour. Drawn as
+   India, with a dashed edge marking that the source disagrees. */
+.map-state.is-claimed {
+  fill: var(--surface);
+  stroke-dasharray: 4 3;
+  opacity: .95;
+}
+
+/* ==========================================================================
+   MATRIMONY — kuta explanations and the deep analysis
+   ========================================================================== */
+
+/* A kuta row opens its explanation. The whole row is the target, not just the
+   button, because a 24px glyph is a poor hit area on a phone. */
+.kuta-table { table-layout: fixed; width: 100%; }
+/* With fixed widths the cells must be allowed to wrap rather than overflow. */
+.kuta-table td, .kuta-table th { overflow-wrap: anywhere; }
+
+.kuta-row { cursor: pointer; }
+.kuta-row:hover { background: var(--surface-2); }
+.kuta-row.is-open { background: var(--surface-2); }
+.kuta-toggle {
+  padding: 1px 8px; font-size: 12px; line-height: 1.5;
+  min-width: 28px;
+}
+.kuta-meaning-row > td { background: var(--surface-2); padding: 0; }
+.kuta-meaning {
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+}
+.kuta-meaning-title { margin: 0 0 8px; font-weight: 600; }
+/* The .kv row is built for short values - monospace, right-aligned against
+   its label. These values are sentences, so both of those work against them:
+   ragged-left prose in a code face is markedly harder to read than the same
+   text set normally. Overridden here rather than loosening .kv globally,
+   which would change every panchanga readout. */
+.kuta-meaning .kv { align-items: baseline; }
+.kuta-meaning .kv dt { min-width: 104px; flex: 0 0 104px; }
+.kuta-meaning .kv dd {
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.5;
+}
+@media (max-width: 560px) {
+  /* Stacked, so a sentence is not squeezed into half a phone's width. */
+  .kuta-meaning .kv { display: block; }
+  .kuta-meaning .kv dt { margin-bottom: 2px; }
+}
+
+/* The total, given room to be read as a figure with a meaning rather than a
+   number in a sentence - but still not a headline verdict, which is why the
+   band sits beside it as a label and not as a grade. */
+.score-summary {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.score-total { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.score-total .muted { font-size: 18px; font-weight: 400; }
+.score-band {
+  margin-left: 12px; padding: 3px 10px;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface-2); font-size: 13px;
+}
+
+.mangala-side h3 { margin-bottom: 6px; }
+.mangala-side h4 { margin: 14px 0 6px; font-size: 13px; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-dim); }
+
+/* A warning notice, distinct from the neutral one. */
+/* `.notice` is amber by default, which is right for a caveat and wrong for a
+   favourable finding - "both charts carry the dosha, so it cancels" was being
+   drawn in the same colour as a warning and read as one. An explicit positive
+   variant, used where the statement is good news. */
+.notice.is-ok { background: var(--ok-bg); color: var(--ok); }
+.notice.is-warn { background: var(--warn-bg); color: var(--warn); }
+/* A neutral statement of fact, neither caution nor reassurance. */
+.notice.is-plain { background: var(--surface-2); color: var(--text); }
+
+ul.tight { margin: 0; padding-left: 18px; }
+ul.tight li { margin-bottom: 4px; }
+
+/* Two columns that collapse on a phone. The bride/groom comparison is the
+   whole point of these blocks, so they stack rather than shrink. */
+.grid.two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 720px) {
+  .grid.two { grid-template-columns: 1fr; gap: 26px; }
+}
+
+/* ==========================================================================
+   KUNDALI — the drawn birth chart
+   ========================================================================== */
+.kundali { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.kundali-title { margin: 0; align-self: flex-start; }
+
+.kundali-tools { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+/* A segmented control: the options are mutually exclusive and the set is
+   small, so showing all of them beats a dropdown that hides the alternative. */
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.seg-btn {
+  font: inherit; font-size: 12px; padding: 4px 10px;
+  background: var(--surface); color: var(--text-dim);
+  border: 0; border-right: 1px solid var(--border); cursor: pointer;
+}
+.seg-btn:last-child { border-right: 0; }
+.seg-btn:hover { color: var(--text); }
+.seg-btn.is-on { background: var(--accent-soft); color: var(--accent); }
+
+.kundali-svg { display: block; }
+.kundali-frame { fill: var(--surface-2); stroke: var(--border); stroke-width: .6; }
+.kundali-centre { fill: var(--surface); stroke: var(--border); stroke-width: .4; }
+.kundali-cell { fill: none; stroke: var(--border); stroke-width: .4; }
+.kundali-cell.is-lagna { fill: var(--accent-soft); }
+.kundali-lagna-label {
+  font-size: 3px; fill: var(--accent); font-weight: 600;
+  letter-spacing: .04em;
+}
+
+/* House number and sign name are orientation, not content: they must be
+   legible but must never compete with the grahas, which are what the chart
+   is actually for. */
+.kundali-house { font-size: 3.2px; fill: var(--text-dim); font-family: var(--mono); }
+/* Slightly smaller than the house number so the longest name - Vrischi -
+   clears the house digits at the other end of the cell. */
+.kundali-sign  { font-size: 2.9px; fill: var(--text-dim); }
+
+.kundali-graha { font-size: 3.9px; fill: var(--text); font-weight: 600; }
+/* Nature is a secondary encoding, never the only one - the three-letter name
+   identifies the graha on its own, so this reads as emphasis for anyone who
+   cannot distinguish the hues. */
+.kundali-graha.nature-malefic { fill: var(--accent); }
+.kundali-graha.nature-benefic { fill: var(--ok); }
+.kundali-graha.dignity-uccha,
+.kundali-graha.dignity-swakshetra { text-decoration: underline; }
+.kundali-graha.dignity-neecha { font-style: italic; opacity: .85; }
+
+.kundali-caption { font-size: 12px; margin: 0; text-align: center; }
+
+/* Two charts side by side on the matrimony page, stacked on a phone. */
+.kundali-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 720px) {
+  .kundali-pair { grid-template-columns: 1fr; }
+}
+
+/* The reason a rule is contested, printed under its badge rather than hidden
+   in a title attribute - tooltips are invisible on touch and easy to miss. */
+.agreement-note { font-size: 13px; margin: 6px 0 12px; }
+
+/* ==========================================================================
+   DASHA OUTLOOK
+   ========================================================================== */
+.outlook-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px;
+}
+/* A card nested inside a card. Slightly inset and on the raised surface, so
+   "what this means for YOU" is visually separable from the classical notes
+   around it - they are different kinds of claim. */
+.card.inset {
+  background: var(--surface-2);
+  margin: 14px 0;
+}
+.outlook-block { margin-top: 12px; }
+.outlook-block h4 {
+  margin: 0 0 4px; font-size: 12px; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-dim);
+}
+.outlook-block h4.is-ok { color: var(--ok); }
+.outlook-block h4.is-warn { color: var(--warn); }
+.outlook-block h4.is-bad { color: var(--bad); }
+.outlook-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+@media (max-width: 700px) { .outlook-cols { grid-template-columns: 1fr; } }
+
+/* The selected bar on a timeline. */
+.tl-seg.is-selected { outline: 2px solid var(--text); outline-offset: 1px; }
+.tl-seg { cursor: pointer; }
+
+/* The dasha running right now, stated in words above the timeline - a bar on
+   a hundred-year track is precise but not legible at a glance. */
+.running-now {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  background: var(--surface-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   SCORE BAND — the guna-milan total's tier
+   --------------------------------------------------------------------------
+   Red, orange, blue, green — worst to best.
+
+   BLUE IN THE THIRD SLOT IS THE ACCESSIBILITY DECISION. An all-warm-to-green
+   ramp runs down the red-green axis, which is what protan and deutan vision
+   collapse; two greens for the top two tiers was the worst case of it.
+   Substituting blue moved worst adjacent CVD separation from dE 8.9 to 17.9
+   on the light surface.
+
+   DERIVED FROM EACH THEME'S OWN STATUS TOKENS rather than listed per theme.
+   The first version named the dark themes explicitly, which meant every new
+   theme would silently inherit the light-mode band colours until somebody
+   remembered to extend the list — a trap set for the next person to add a
+   theme. Every theme already defines --bad / --warn / --ok tuned for its own
+   surface, so the ramp only needed one genuinely new token, --info.
+
+   Colour is never the only signal: every chip carries its label.
+   ========================================================================== */
+:root {
+  --band-critical: var(--bad);   --band-critical-bg: var(--bad-bg);
+  --band-warning:  var(--warn);  --band-warning-bg:  var(--warn-bg);
+  --band-good:     var(--info);  --band-good-bg:     var(--info-bg);
+  --band-excellent:var(--ok);    --band-excellent-bg:var(--ok-bg);
+}
+
+.score-band.tone-critical  { color: var(--band-critical);  background: var(--band-critical-bg);  border-color: var(--band-critical); }
+.score-band.tone-warning   { color: var(--band-warning);   background: var(--band-warning-bg);   border-color: var(--band-warning); }
+.score-band.tone-good      { color: var(--band-good);      background: var(--band-good-bg);      border-color: var(--band-good); }
+.score-band.tone-excellent { color: var(--band-excellent); background: var(--band-excellent-bg); border-color: var(--band-excellent); }
+.score-band { font-weight: 600; }
+
+/* The total itself takes the tier's colour, so the number and its label read
+   as one statement rather than a figure with a tag beside it. */
+.score-total.tone-critical  { color: var(--band-critical); }
+.score-total.tone-warning   { color: var(--band-warning); }
+.score-total.tone-good      { color: var(--band-good); }
+.score-total.tone-excellent { color: var(--band-excellent); }
+.score-total .muted { color: var(--text-dim); }
+
+/* ==========================================================================
+   LOCATION PICKER — map beside its coordinates
+   ========================================================================== */
+.loc-layout {
+  /* Flex, not grid: the two items size to their own content and the pair is
+     centred as a group. A grid column sized `auto` or `min-content` either
+     absorbed all the slack or collapsed the map to a sliver - the map has an
+     explicit width and simply needs to be left at it. */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* The map sits at the RIGHT of its column and the coordinates at the LEFT of
+   theirs, so the two meet in the middle with one clear gutter between them.
+   Left to their defaults the map centred itself in a wide column while the
+   fields hugged the card's right edge, which put a ragged gap between two
+   things that are views of the same value and need to be read together. */
+.loc-map { flex: 0 1 auto; }
+.loc-map .mapwrap { align-items: center; width: auto; }
+
+/* THE CAPTION, NOT THE MAP, WAS SIZING THE COLUMN.
+   It is one long sentence, so its max-content width is far wider than the
+   chart above it, and every layout that asked the container to size itself to
+   its contents sized to the caption instead. Capping it below the map's width
+   makes the MAP the widest thing in the box again, which is what every rule
+   here assumed all along. Expressed in ch so it tracks the font rather than a
+   pixel guess. */
+.mapwrap > .muted { max-width: 40ch; }
+/* Without a map there is nothing to sit beside, so the fields take the width
+   rather than leaving a column of air where the map would have been. */
+.loc-layout.no-map { justify-content: flex-start; }
+.loc-layout.no-map .loc-coords { max-width: 320px; }
+
+.loc-coords {
+  flex: 0 0 240px;
+  display: flex; flex-direction: column; gap: 12px;
+  align-items: stretch; text-align: left;
+}
+.loc-coords input { width: 100%; }
+.loc-use { width: 100%; }
+
+/* On a phone the two stack, and the map goes SECOND: the coordinate boxes are
+   the part you reach for when the map is too small to aim at. */
+@media (max-width: 760px) {
+  .loc-layout { gap: 18px; }
+  .loc-map { order: 2; }
+  .loc-coords { order: 1; flex: 1 1 100%; }
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  /* `auto` rather than a fixed 40px: in the column flex layout this absorbs
+     whatever vertical space is left over, which pins the footer to the bottom
+     of the viewport on a short page and resolves to 0 on a long one. The
+     separation from content on a long page comes from `.wrap`'s own 64px
+     bottom padding, so nothing is lost. */
+  margin-top: auto;
+  flex-shrink: 0;
+  padding: 20px 16px 32px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.footer-inner {
+  max-width: 1120px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; flex-wrap: wrap;
+}
+.footer-note {
+  max-width: 1120px; margin: 8px auto 0;
+  font-size: 12px; line-height: 1.6;
+}
+
+/* Footer navigation is buttons, not anchors: these are in-app routes, and an
+   <a href="#terms"> would fight the hash router rather than drive it. They
+   are styled as links because that is what they behave like. */
+.footer-links { display: flex; align-items: center; gap: 8px; }
+.footer-links button, .linklike {
+  background: none; border: 0; padding: 0;
+  font: inherit; color: var(--text-dim);
+  text-decoration: underline; text-underline-offset: 2px;
+  cursor: pointer;
+}
+.footer-links button:hover, .linklike:hover { color: var(--accent); }
+
+/* ---- legal pages ---- */
+/* The same 16px every other tab gives its first card via an inline marginTop.
+   `.wrap` has no top padding of its own, so without this the first card sits
+   flush against the sticky header. The bottom is left to `.wrap`'s own 64px,
+   so these pages are spaced exactly like the rest of the app. */
+.wrap-legal { padding-top: 16px; }
+
+/* No width cap. A 760px measure is easier to read, but it left these cards
+   narrower than every other page's and sitting against the left edge with a
+   band of empty space beside them, which reads as a layout fault rather than
+   as typography. Matching the rest of the app wins. */
+.legal { max-width: none; }
+.legal h3 { margin: 20px 0 6px; font-size: 15px; }
+.legal p { margin: 0 0 10px; }
+.legal .kv dt { min-width: 150px; flex: 0 0 150px; }
+.legal .kv dd {
+  font-family: inherit; font-size: 14px; line-height: 1.55;
+  /* `flex: 1` rather than just text-align: the .kv row is space-between, so a
+     single-line value with nothing to push against ends up hard against the
+     right edge while multi-line ones start at the left. Letting the value
+     claim the remaining width makes every row begin in the same column. */
+  flex: 1; text-align: left;
+}
+.legal .kv { align-items: baseline; }
+@media (max-width: 560px) {
+  .legal .kv { display: block; }
+  .legal .kv dt { margin-bottom: 2px; }
+}
+
+/* Muhurta points: one line per rule, coloured by outcome. */
+.pt { display: grid; grid-template-columns: 22px 1fr; gap: 6px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+.pt:last-child { border-bottom: 0; }
+.pt .mark { font-weight: 700; text-align: center; border-radius: 6px; line-height: 20px; height: 20px; }
+.pt.pass .mark { background: var(--ok-bg); color: var(--ok); }
+.pt.warn .mark { background: var(--warn-bg); color: var(--warn); }
+.pt.fail .mark { background: var(--bad-bg); color: var(--bad); }
+.pt.info .mark { background: var(--surface-2); color: var(--text-dim); }
+.pt .basis { color: var(--text-dim); font-size: 12px; margin-top: 3px; }
+.pt details summary { cursor: pointer; color: var(--text-dim); font-size: 12px; }
+.verdict { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+.verdict.shubha { background: var(--ok-bg); color: var(--ok); }
+.verdict.shubha-with-cautions { background: var(--warn-bg); color: var(--warn); }
+.verdict.ashubha, .verdict.no-usable-time { background: var(--bad-bg); color: var(--bad); }
+.nature-shubha { color: var(--ok); }
+.nature-ashubha, .nature-ashubha-classical { color: var(--bad); }

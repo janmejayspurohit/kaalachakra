@@ -1,0 +1,11 @@
+packages:
+  - 'packages/*'
+  - 'apps/*'
+
+# pnpm blocks dependency install scripts by default. Both of these genuinely
+# need to run: @kaalachakra/swisseph compiles the vendored ephemeris binding,
+# and esbuild places the platform binary Vite depends on. Without this the
+# install APPEARS to succeed while compiling nothing.
+allowBuilds:
+  esbuild: true
+  '@kaalachakra/swisseph': true

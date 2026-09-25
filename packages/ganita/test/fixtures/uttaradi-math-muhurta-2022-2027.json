@@ -1,0 +1,6979 @@
+{
+ "source": "Sri Uttaradi Math panchanga, English city editions 2025-26 and 2026-27 (cdn.umath.in). Extracted 2026-09-23.",
+ "varaNakshatraMarks": {
+  "note": "key \"vara|nakshatra\" (vara 0=Sunday, nakshatra 1..27); decoded from 5,497 dated marks",
+  "cells": {
+   "0|1": {
+    "mark": "+",
+    "support": 23,
+    "total": 23
+   },
+   "1|1": {
+    "mark": "+",
+    "support": 25,
+    "total": 25
+   },
+   "2|1": {
+    "mark": "-",
+    "support": 20,
+    "total": 20
+   },
+   "3|1": {
+    "mark": "+",
+    "support": 23,
+    "total": 23
+   },
+   "4|1": {
+    "mark": "-",
+    "support": 27,
+    "total": 27
+   },
+   "5|1": {
+    "mark": "+",
+    "support": 29,
+    "total": 29
+   },
+   "6|1": {
+    "mark": "-",
+    "support": 35,
+    "total": 36
+   },
+   "0|2": {
+    "mark": "-",
+    "support": 33,
+    "total": 33
+   },
+   "1|2": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "2|2": {
+    "mark": "-",
+    "support": 26,
+    "total": 26
+   },
+   "3|2": {
+    "mark": "+",
+    "support": 16,
+    "total": 16
+   },
+   "4|2": {
+    "mark": "-",
+    "support": 20,
+    "total": 20
+   },
+   "5|2": {
+    "mark": "-",
+    "support": 25,
+    "total": 25
+   },
+   "6|2": {
+    "mark": "-",
+    "support": 32,
+    "total": 32
+   },
+   "0|3": {
+    "mark": "-",
+    "support": 31,
+    "total": 31
+   },
+   "1|3": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "2|3": {
+    "mark": "+",
+    "support": 33,
+    "total": 33
+   },
+   "3|3": {
+    "mark": "-",
+    "support": 27,
+    "total": 27
+   },
+   "4|3": {
+    "mark": "+",
+    "support": 20,
+    "total": 20
+   },
+   "5|3": {
+    "mark": "-",
+    "support": 20,
+    "total": 20
+   },
+   "6|3": {
+    "mark": "+",
+    "support": 25,
+    "total": 25
+   },
+   "0|4": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "1|4": {
+    "mark": "+",
+    "support": 31,
+    "total": 32
+   },
+   "2|4": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "3|4": {
+    "mark": "-",
+    "support": 35,
+    "total": 35
+   },
+   "4|4": {
+    "mark": "+",
+    "support": 26,
+    "total": 26
+   },
+   "5|4": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "6|4": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "0|5": {
+    "mark": "+",
+    "support": 22,
+    "total": 22
+   },
+   "1|5": {
+    "mark": "-",
+    "support": 26,
+    "total": 26
+   },
+   "2|5": {
+    "mark": "+",
+    "support": 36,
+    "total": 36
+   },
+   "3|5": {
+    "mark": "-",
+    "support": 33,
+    "total": 33
+   },
+   "4|5": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "5|5": {
+    "mark": "-",
+    "support": 24,
+    "total": 24
+   },
+   "6|5": {
+    "mark": "+",
+    "support": 22,
+    "total": 22
+   },
+   "0|6": {
+    "mark": "-",
+    "support": 22,
+    "total": 23
+   },
+   "1|6": {
+    "mark": "-",
+    "support": 19,
+    "total": 19
+   },
+   "2|6": {
+    "mark": "+",
+    "support": 18,
+    "total": 20
+   },
+   "3|6": {
+    "mark": "-",
+    "support": 32,
+    "total": 32
+   },
+   "4|6": {
+    "mark": "-",
+    "support": 32,
+    "total": 32
+   },
+   "5|6": {
+    "mark": "-",
+    "support": 33,
+    "total": 33
+   },
+   "6|6": {
+    "mark": "-",
+    "support": 22,
+    "total": 22
+   },
+   "0|7": {
+    "mark": "+",
+    "support": 22,
+    "total": 22
+   },
+   "1|7": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "2|7": {
+    "mark": "-",
+    "support": 21,
+    "total": 21
+   },
+   "3|7": {
+    "mark": "+",
+    "support": 17,
+    "total": 17
+   },
+   "4|7": {
+    "mark": "-",
+    "support": 30,
+    "total": 30
+   },
+   "5|7": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "6|7": {
+    "mark": "-",
+    "support": 33,
+    "total": 34
+   },
+   "0|8": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "1|8": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "2|8": {
+    "mark": "-",
+    "support": 20,
+    "total": 20
+   },
+   "3|8": {
+    "mark": "+",
+    "support": 22,
+    "total": 22
+   },
+   "4|8": {
+    "mark": "+",
+    "support": 29,
+    "total": 29
+   },
+   "5|8": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "6|8": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "0|9": {
+    "mark": "-",
+    "support": 31,
+    "total": 31
+   },
+   "1|9": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "2|9": {
+    "mark": "-",
+    "support": 24,
+    "total": 24
+   },
+   "3|9": {
+    "mark": "+",
+    "support": 20,
+    "total": 20
+   },
+   "4|9": {
+    "mark": "-",
+    "support": 22,
+    "total": 22
+   },
+   "5|9": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "6|9": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "0|10": {
+    "mark": "-",
+    "support": 35,
+    "total": 35
+   },
+   "1|10": {
+    "mark": "+",
+    "support": 33,
+    "total": 33
+   },
+   "2|10": {
+    "mark": "-",
+    "support": 37,
+    "total": 37
+   },
+   "3|10": {
+    "mark": "-",
+    "support": 25,
+    "total": 25
+   },
+   "4|10": {
+    "mark": "-",
+    "support": 23,
+    "total": 23
+   },
+   "5|10": {
+    "mark": "-",
+    "support": 21,
+    "total": 21
+   },
+   "6|10": {
+    "mark": "-",
+    "support": 32,
+    "total": 33
+   },
+   "0|11": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "1|11": {
+    "mark": "-",
+    "support": 37,
+    "total": 37
+   },
+   "2|11": {
+    "mark": "+",
+    "support": 35,
+    "total": 35
+   },
+   "3|11": {
+    "mark": "-",
+    "support": 36,
+    "total": 36
+   },
+   "4|11": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "5|11": {
+    "mark": "-",
+    "support": 23,
+    "total": 23
+   },
+   "6|11": {
+    "mark": "+",
+    "support": 26,
+    "total": 27
+   },
+   "0|12": {
+    "mark": "+",
+    "support": 26,
+    "total": 26
+   },
+   "1|12": {
+    "mark": "-",
+    "support": 25,
+    "total": 25
+   },
+   "2|12": {
+    "mark": "+",
+    "support": 36,
+    "total": 36
+   },
+   "3|12": {
+    "mark": "+",
+    "support": 34,
+    "total": 34
+   },
+   "4|12": {
+    "mark": "+",
+    "support": 33,
+    "total": 33
+   },
+   "5|12": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "6|12": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "0|13": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "1|13": {
+    "mark": "-",
+    "support": 28,
+    "total": 28
+   },
+   "2|13": {
+    "mark": "+",
+    "support": 22,
+    "total": 22
+   },
+   "3|13": {
+    "mark": "-",
+    "support": 38,
+    "total": 38
+   },
+   "4|13": {
+    "mark": "+",
+    "support": 34,
+    "total": 35
+   },
+   "5|13": {
+    "mark": "+",
+    "support": 36,
+    "total": 36
+   },
+   "6|13": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "0|14": {
+    "mark": "+",
+    "support": 37,
+    "total": 37
+   },
+   "1|14": {
+    "mark": "-",
+    "support": 22,
+    "total": 22
+   },
+   "2|14": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "3|14": {
+    "mark": "-",
+    "support": 20,
+    "total": 20
+   },
+   "4|14": {
+    "mark": "-",
+    "support": 36,
+    "total": 36
+   },
+   "5|14": {
+    "mark": "-",
+    "support": 37,
+    "total": 37
+   },
+   "6|14": {
+    "mark": "-",
+    "support": 37,
+    "total": 37
+   },
+   "0|15": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "1|15": {
+    "mark": "+",
+    "support": 37,
+    "total": 37
+   },
+   "2|15": {
+    "mark": "-",
+    "support": 18,
+    "total": 18
+   },
+   "3|15": {
+    "mark": "+",
+    "support": 26,
+    "total": 26
+   },
+   "4|15": {
+    "mark": "-",
+    "support": 33,
+    "total": 33
+   },
+   "5|15": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "6|15": {
+    "mark": "+",
+    "support": 43,
+    "total": 43
+   },
+   "0|16": {
+    "mark": "-",
+    "support": 38,
+    "total": 39
+   },
+   "1|16": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "2|16": {
+    "mark": "+",
+    "support": 38,
+    "total": 38
+   },
+   "3|16": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "4|16": {
+    "mark": "+",
+    "support": 23,
+    "total": 23
+   },
+   "5|16": {
+    "mark": "+",
+    "support": 41,
+    "total": 41
+   },
+   "6|16": {
+    "mark": "+",
+    "support": 29,
+    "total": 29
+   },
+   "0|17": {
+    "mark": "-",
+    "support": 30,
+    "total": 30
+   },
+   "1|17": {
+    "mark": "+",
+    "support": 41,
+    "total": 41
+   },
+   "2|17": {
+    "mark": "-",
+    "support": 35,
+    "total": 35
+   },
+   "3|17": {
+    "mark": "+",
+    "support": 34,
+    "total": 34
+   },
+   "4|17": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "5|17": {
+    "mark": "-",
+    "support": 18,
+    "total": 18
+   },
+   "6|17": {
+    "mark": "+",
+    "support": 40,
+    "total": 40
+   },
+   "0|18": {
+    "mark": "-",
+    "support": 41,
+    "total": 41
+   },
+   "1|18": {
+    "mark": "-",
+    "support": 34,
+    "total": 34
+   },
+   "2|18": {
+    "mark": "-",
+    "support": 33,
+    "total": 33
+   },
+   "3|18": {
+    "mark": "-",
+    "support": 42,
+    "total": 42
+   },
+   "4|18": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "5|18": {
+    "mark": "-",
+    "support": 26,
+    "total": 26
+   },
+   "6|18": {
+    "mark": "+",
+    "support": 20,
+    "total": 21
+   },
+   "0|19": {
+    "mark": "+",
+    "support": 25,
+    "total": 25
+   },
+   "1|19": {
+    "mark": "-",
+    "support": 25,
+    "total": 25
+   },
+   "2|19": {
+    "mark": "+",
+    "support": 41,
+    "total": 41
+   },
+   "3|19": {
+    "mark": "-",
+    "support": 29,
+    "total": 29
+   },
+   "4|19": {
+    "mark": "+",
+    "support": 37,
+    "total": 38
+   },
+   "5|19": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "6|19": {
+    "mark": "-",
+    "support": 28,
+    "total": 28
+   },
+   "0|20": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "1|20": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   },
+   "2|20": {
+    "mark": "+",
+    "support": 20,
+    "total": 20
+   },
+   "3|20": {
+    "mark": "+",
+    "support": 35,
+    "total": 35
+   },
+   "4|20": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "5|20": {
+    "mark": "+",
+    "support": 42,
+    "total": 42
+   },
+   "6|20": {
+    "mark": "-",
+    "support": 31,
+    "total": 31
+   },
+   "0|21": {
+    "mark": "+",
+    "support": 33,
+    "total": 33
+   },
+   "1|21": {
+    "mark": "-",
+    "support": 23,
+    "total": 23
+   },
+   "2|21": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "3|21": {
+    "mark": "+",
+    "support": 21,
+    "total": 21
+   },
+   "4|21": {
+    "mark": "-",
+    "support": 41,
+    "total": 41
+   },
+   "5|21": {
+    "mark": "+",
+    "support": 27,
+    "total": 27
+   },
+   "6|21": {
+    "mark": "-",
+    "support": 38,
+    "total": 38
+   },
+   "0|22": {
+    "mark": "-",
+    "support": 31,
+    "total": 31
+   },
+   "1|22": {
+    "mark": "+",
+    "support": 34,
+    "total": 34
+   },
+   "2|22": {
+    "mark": "-",
+    "support": 21,
+    "total": 21
+   },
+   "3|22": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "4|22": {
+    "mark": "+",
+    "support": 27,
+    "total": 27
+   },
+   "5|22": {
+    "mark": "-",
+    "support": 39,
+    "total": 39
+   },
+   "6|22": {
+    "mark": "+",
+    "support": 38,
+    "total": 38
+   },
+   "0|23": {
+    "mark": "+",
+    "support": 35,
+    "total": 35
+   },
+   "1|23": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "2|23": {
+    "mark": "+",
+    "support": 39,
+    "total": 39
+   },
+   "3|23": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "4|23": {
+    "mark": "+",
+    "support": 26,
+    "total": 26
+   },
+   "5|23": {
+    "mark": "-",
+    "support": 27,
+    "total": 27
+   },
+   "6|23": {
+    "mark": "+",
+    "support": 35,
+    "total": 35
+   },
+   "0|24": {
+    "mark": "-",
+    "support": 32,
+    "total": 32
+   },
+   "1|24": {
+    "mark": "+",
+    "support": 37,
+    "total": 37
+   },
+   "2|24": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "3|24": {
+    "mark": "-",
+    "support": 34,
+    "total": 34
+   },
+   "4|24": {
+    "mark": "+",
+    "support": 24,
+    "total": 24
+   },
+   "5|24": {
+    "mark": "-",
+    "support": 21,
+    "total": 21
+   },
+   "6|24": {
+    "mark": "+",
+    "support": 28,
+    "total": 28
+   },
+   "0|25": {
+    "mark": "-",
+    "support": 30,
+    "total": 30
+   },
+   "1|25": {
+    "mark": "-",
+    "support": 27,
+    "total": 27
+   },
+   "2|25": {
+    "mark": "-",
+    "support": 32,
+    "total": 32
+   },
+   "3|25": {
+    "mark": "-",
+    "support": 35,
+    "total": 35
+   },
+   "4|25": {
+    "mark": "+",
+    "support": 30,
+    "total": 32
+   },
+   "5|25": {
+    "mark": "-",
+    "support": 25,
+    "total": 25
+   },
+   "6|25": {
+    "mark": "-",
+    "support": 22,
+    "total": 22
+   },
+   "0|26": {
+    "mark": "+",
+    "support": 25,
+    "total": 25
+   },
+   "1|26": {
+    "mark": "-",
+    "support": 21,
+    "total": 22
+   },
+   "2|26": {
+    "mark": "+",
+    "support": 22,
+    "total": 24
+   },
+   "3|26": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "4|26": {
+    "mark": "-",
+    "support": 40,
+    "total": 40
+   },
+   "5|26": {
+    "mark": "+",
+    "support": 34,
+    "total": 34
+   },
+   "6|26": {
+    "mark": "-",
+    "support": 26,
+    "total": 26
+   },
+   "0|27": {
+    "mark": "+",
+    "support": 30,
+    "total": 30
+   },
+   "1|27": {
+    "mark": "+",
+    "support": 27,
+    "total": 27
+   },
+   "2|27": {
+    "mark": "+",
+    "support": 22,
+    "total": 24
+   },
+   "3|27": {
+    "mark": "+",
+    "support": 19,
+    "total": 19
+   },
+   "4|27": {
+    "mark": "-",
+    "support": 30,
+    "total": 30
+   },
+   "5|27": {
+    "mark": "+",
+    "support": 32,
+    "total": 32
+   },
+   "6|27": {
+    "mark": "+",
+    "support": 31,
+    "total": 31
+   }
+  }
+ },
+ "gowri": {
+  "rows": [
+   [
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha"
+   ],
+   [
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha"
+   ],
+   [
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga"
+   ],
+   [
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga"
+   ],
+   [
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala"
+   ],
+   [
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha"
+   ],
+   [
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha"
+   ],
+   [
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha"
+   ],
+   [
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha"
+   ],
+   [
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga"
+   ],
+   [
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha"
+   ],
+   [
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha"
+   ],
+   [
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala"
+   ],
+   [
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga"
+   ],
+   [
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha",
+    "Shubha",
+    "Chanchala",
+    "Kalaha"
+   ],
+   [
+    "Shubha",
+    "Chanchala",
+    "Kalaha",
+    "Udyoga",
+    "Amrutha",
+    "Roga",
+    "Labha"
+   ]
+  ],
+  "good": [
+   "Udyoga",
+   "Amrutha",
+   "Labha",
+   "Shubha"
+  ],
+  "bad": [
+   "Roga",
+   "Chanchala",
+   "Kalaha"
+  ]
+ },
+ "muhurtas": {
+  "note": "published Vivaha/Upanayana muhurta dates; lagnas as [rashi 1..12, starredNotPreferred]",
+  "editions": {
+   "chicago": {
+    "2025-2026": [
+     {
+      "date": "2025-03-30",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-10",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-18",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-12",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-13",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-16",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-10",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-05",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-03",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-22",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-26",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-02",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-07",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-23",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-18",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-25",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-26",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-03",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-07",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-19",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-22",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-25",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-06",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-30",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-21",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-24",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-12",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-14",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-22",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-29",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-20",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-13",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-24",
+      "lagnas": []
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-08",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-11",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-22",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-11",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-08",
+      "lagnas": [
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-11",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ]
+   },
+   "denver": {
+    "2025-2026": [
+     {
+      "date": "2025-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-10",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-18",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-01",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-12",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-13",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-16",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-10",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-03",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-22",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-02",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-23",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-18",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-25",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-27",
+      "lagnas": [
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-26",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-03",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-07",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-19",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-22",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-24",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-25",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-02",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-06",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-15",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-16",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-20",
+      "lagnas": [
+       [
+        6,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-30",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-31",
+      "lagnas": [
+       [
+        6,
+        false
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-04",
+      "lagnas": [
+       [
+        6,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "lagnas": [
+       [
+        6,
+        false
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-16",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-21",
+      "lagnas": [
+       [
+        11,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-12",
+      "lagnas": [
+       [
+        6,
+        false
+       ],
+       [
+        11,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-14",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-18",
+      "lagnas": [
+       [
+        11,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-29",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-15",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-20",
+      "lagnas": [
+       [
+        11,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-25",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-26",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-02",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-03",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-13",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-14",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-24",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-28",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-29",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-31",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-08",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-11",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-22",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-24",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-25",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-01",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-10",
+      "lagnas": [
+       [
+        11,
+        true
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-11",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-15",
+      "lagnas": []
+     },
+     {
+      "date": "2027-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-29",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-31",
+      "lagnas": []
+     },
+     {
+      "date": "2027-04-01",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-08",
+      "lagnas": [
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-11",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ]
+   },
+   "dubai": {
+    "2025-2026": [
+     {
+      "date": "2025-04-04",
+      "lagnas": [
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-07",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-14",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-16",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-05",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-02",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-16",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-11",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-14",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-15",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-05",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-24",
+      "lagnas": [
+       [
+        6,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-02",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-03",
+      "lagnas": [
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-07",
+      "lagnas": [
+       [
+        9,
+        true
+       ],
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-05",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-22",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-26",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-12",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": []
+   },
+   "london": {
+    "2025-2026": [
+     {
+      "date": "2025-04-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-01",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-14",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-16",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-05",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-02",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-13",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-16",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-13",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-05",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-24",
+      "lagnas": [
+       [
+        6,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-02",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-05",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-22",
+      "lagnas": [
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-06",
+      "lagnas": [
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": []
+   },
+   "los_angeles": {
+    "2025-2026": [
+     {
+      "date": "2025-03-30",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-10",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-18",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-30",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-05",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-12",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-13",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-10",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-05",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-03",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-22",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-02",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-07",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-24",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-23",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-18",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-27",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-03",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-20",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-26",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-03",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-07",
+      "lagnas": [
+       [
+        1,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-17",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-19",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-22",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-24",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-06",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-16",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-30",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-21",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-23",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-24",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-12",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-14",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-23",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-29",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-20",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-25",
+      "lagnas": [
+       [
+        9,
+        true
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-13",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-24",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-08",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-11",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-22",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-11",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-11",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ]
+   },
+   "melbourne": {
+    "2025-2026": [
+     {
+      "date": "2025-04-07",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-17",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-01",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-14",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-16",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-05",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-02",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-14",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-11",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-14",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-29",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-24",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-02",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-29",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-09",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-12-01",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-05",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-11",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-22",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-05",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        12,
+        false
+       ]
+      ]
+     }
+    ]
+   },
+   "sydney": {
+    "2025-2026": [
+     {
+      "date": "2025-04-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-07",
+      "lagnas": [
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-17",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-01",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-14",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-16",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-05",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-08",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-02",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-14",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-11",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-14",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-29",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-24",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-02",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-29",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-09",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-12-01",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-29",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-05",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-11",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-22",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-05",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        12,
+        false
+       ]
+      ]
+     }
+    ]
+   },
+   "washington": {
+    "2025-2026": [
+     {
+      "date": "2025-03-30",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-10",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-04-18",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-08",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-05-09",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-02",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-04",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-06-12",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-07",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-13",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-30",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-07-31",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-01",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ],
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-10",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-25",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-27",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-08-28",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-04",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-09-05",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-10-03",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-02",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-07",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2025-11-30",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-23",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-06",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-08",
+      "lagnas": [
+       [
+        3,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-20",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-22",
+      "lagnas": [
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-02-25",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-04",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-06",
+      "lagnas": [
+       [
+        1,
+        false
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-09",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ],
+    "2026-2027": [
+     {
+      "date": "2026-03-20",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        1,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-03-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-03",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-26",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-04-29",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        4,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-05-03",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-22",
+      "lagnas": [
+       [
+        4,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-06-25",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-01",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-07-06",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-16",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-08-30",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-13",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-14",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-21",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-23",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-09-24",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-12",
+      "lagnas": [
+       [
+        6,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-14",
+      "lagnas": [
+       [
+        7,
+        true
+       ],
+       [
+        9,
+        true
+       ],
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-22",
+      "lagnas": [
+       [
+        7,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-10-29",
+      "lagnas": [
+       [
+        12,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-20",
+      "lagnas": [
+       [
+        9,
+        true
+       ]
+      ]
+     },
+     {
+      "date": "2026-11-26",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2026-12-13",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-24",
+      "lagnas": [
+       [
+        12,
+        true
+       ],
+       [
+        1,
+        true
+       ],
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-27",
+      "lagnas": [
+       [
+        3,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-01-28",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-08",
+      "lagnas": [
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-11",
+      "lagnas": [
+       [
+        2,
+        false
+       ],
+       [
+        11,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-02-22",
+      "lagnas": [
+       [
+        1,
+        true
+       ],
+       [
+        12,
+        false
+       ],
+       [
+        1,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-11",
+      "lagnas": [
+       [
+        11,
+        false
+       ],
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-03-25",
+      "lagnas": [
+       [
+        2,
+        false
+       ]
+      ]
+     },
+     {
+      "date": "2027-04-08",
+      "lagnas": [
+       [
+        1,
+        false
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "astha": [
+  [
+   "guru",
+   "2023-03-31",
+   "2023-04-25"
+  ],
+  [
+   "guru",
+   "2024-05-06",
+   "2024-05-31"
+  ],
+  [
+   "guru",
+   "2025-06-13",
+   "2025-07-07"
+  ],
+  [
+   "guru",
+   "2026-07-18",
+   "2026-08-11"
+  ],
+  [
+   "shukra",
+   "2022-09-26",
+   "2022-11-17"
+  ],
+  [
+   "shukra",
+   "2023-08-09",
+   "2023-08-17"
+  ],
+  [
+   "shukra",
+   "2024-05-10",
+   "2024-06-27"
+  ],
+  [
+   "shukra",
+   "2025-03-18",
+   "2025-03-26"
+  ],
+  [
+   "shukra",
+   "2025-12-10",
+   "2026-02-03"
+  ],
+  [
+   "shukra",
+   "2026-10-20",
+   "2026-10-28"
+  ],
+  [
+   "bhouma",
+   "2023-10-01",
+   "2024-01-10"
+  ],
+  [
+   "bhouma",
+   "2025-11-14",
+   "2026-03-17"
+  ]
+ ]
+}

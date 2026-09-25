@@ -1,0 +1,27 @@
+{
+  "name": "@kaalachakra/swisseph",
+  "version": "0.1.0",
+  "description": "Vendored Swiss Ephemeris 2.09.03 with a hand-written N-API binding. No third-party dependencies.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "vendor",
+    "ephe",
+    "binding.gyp"
+  ],
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "build": "node-gyp rebuild",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "node-gyp": "^11.0.0"
+  }
+}

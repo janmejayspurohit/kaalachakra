@@ -1,0 +1,421 @@
+[
+  {
+    "name": "Vedavyasa Tirtha",
+    "sourceDate": "2025-03-31",
+    "masa": "Chaitra",
+    "paksha": "shukla",
+    "tithi": 2,
+    "tithiName": "Dwitiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Kavindra Tirtha",
+    "sourceDate": "2025-04-06",
+    "masa": "Chaitra",
+    "paksha": "shukla",
+    "tithi": 9,
+    "tithiName": "Navami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyapriya Tirtha",
+    "sourceDate": "2025-04-10",
+    "masa": "Chaitra",
+    "paksha": "shukla",
+    "tithi": 13,
+    "tithiName": "Trayodashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Vagisha Tirtha",
+    "sourceDate": "2025-04-16",
+    "masa": "Chaitra",
+    "paksha": "krishna",
+    "tithi": 3,
+    "tithiName": "Tritiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satya Vijayadhwaja Tirtha",
+    "sourceDate": "2025-04-26",
+    "masa": "Chaitra",
+    "paksha": "krishna",
+    "tithi": 13,
+    "tithiName": "Trayodashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Vidyadhiraja Tirtha",
+    "sourceDate": "2025-04-30",
+    "masa": "Vaishakha",
+    "paksha": "shukla",
+    "tithi": 3,
+    "tithiName": "Tritiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Ramachandra Tirtha",
+    "sourceDate": "2025-05-03",
+    "masa": "Vaishakha",
+    "paksha": "shukla",
+    "tithi": 6,
+    "tithiName": "Shashti",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyasandha Tirtha",
+    "sourceDate": "2025-05-28",
+    "masa": "Jyeshtha",
+    "paksha": "shukla",
+    "tithi": 2,
+    "tithiName": "Dwitiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyabhinava Tirtha",
+    "sourceDate": "2025-06-10",
+    "masa": "Jyeshtha",
+    "paksha": "shukla",
+    "tithi": 14,
+    "tithiName": "Chaturdashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyapoorna Tirtha",
+    "sourceDate": "2025-06-13",
+    "masa": "Jyeshtha",
+    "paksha": "krishna",
+    "tithi": 2,
+    "tithiName": "Dwitiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Raghuvarya Tirtha",
+    "sourceDate": "2025-06-14",
+    "masa": "Jyeshtha",
+    "paksha": "krishna",
+    "tithi": 3,
+    "tithiName": "Tritiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyadhiraja Tirtha",
+    "sourceDate": "2025-07-04",
+    "masa": "Ashadha",
+    "paksha": "shukla",
+    "tithi": 9,
+    "tithiName": "Navami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Jaya Tirtha",
+    "sourceDate": "2025-07-15",
+    "masa": "Ashadha",
+    "paksha": "krishna",
+    "tithi": 5,
+    "tithiName": "Panchami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyaadheesha Tirtha",
+    "sourceDate": "2025-07-24",
+    "masa": "Ashadha",
+    "paksha": "krishna",
+    "tithi": 15,
+    "tithiName": "Amavasya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyavara Tirtha (I)",
+    "sourceDate": "2025-07-31",
+    "masa": "Shravana",
+    "paksha": "shukla",
+    "tithi": 7,
+    "tithiName": "Saptami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Raghavendra Tirtha",
+    "sourceDate": "2025-08-11",
+    "masa": "Shravana",
+    "paksha": "krishna",
+    "tithi": 2,
+    "tithiName": "Dwitiya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyeshtakama Tirtha",
+    "sourceDate": "2025-09-02",
+    "masa": "Bhadrapada",
+    "paksha": "shukla",
+    "tithi": 10,
+    "tithiName": "Dashami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Madhava Tirtha",
+    "sourceDate": "2025-09-21",
+    "masa": "Bhadrapada",
+    "paksha": "krishna",
+    "tithi": 15,
+    "tithiName": "Amavasya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyaparayana Tirtha",
+    "sourceDate": "2025-09-29",
+    "masa": "Ashvayuja",
+    "paksha": "shukla",
+    "tithi": 7,
+    "tithiName": "Saptami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyaparakrama Tirtha",
+    "sourceDate": "2025-09-30",
+    "masa": "Ashvayuja",
+    "paksha": "shukla",
+    "tithi": 8,
+    "tithiName": "Ashtami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyavara Tirtha (II)",
+    "sourceDate": "2025-10-31",
+    "masa": "Kartika",
+    "paksha": "shukla",
+    "tithi": 9,
+    "tithiName": "Navami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Vedanidhi Tirtha",
+    "sourceDate": "2025-11-01",
+    "masa": "Kartika",
+    "paksha": "shukla",
+    "tithi": 11,
+    "tithiName": "Ekadashi",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (16/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Kartika",
+      "paksha": "shukla",
+      "tithi": 10,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "U17"
+  },
+  {
+    "name": "Vidyanidhi Tirtha",
+    "sourceDate": "2025-11-09",
+    "masa": "Kartika",
+    "paksha": "krishna",
+    "tithi": 4,
+    "tithiName": "Chaturthi",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (15/15 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Kartika",
+      "paksha": "krishna",
+      "tithi": 5,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "U11"
+  },
+  {
+    "name": "Padmanabha Tirtha",
+    "sourceDate": "2025-11-19",
+    "masa": "Kartika",
+    "paksha": "krishna",
+    "tithi": 14,
+    "tithiName": "Chaturdashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyanidhi Tirtha",
+    "sourceDate": "2025-11-30",
+    "masa": "Margashira",
+    "paksha": "shukla",
+    "tithi": 10,
+    "tithiName": "Dashami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyanatha Tirtha",
+    "sourceDate": "2025-12-02",
+    "masa": "Margashira",
+    "paksha": "shukla",
+    "tithi": 11,
+    "tithiName": "Ekadashi",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (16/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Margashira",
+      "paksha": "shukla",
+      "tithi": 12,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "U20"
+  },
+  {
+    "name": "Raghunatha Tirtha",
+    "sourceDate": "2025-12-16",
+    "masa": "Margashira",
+    "paksha": "krishna",
+    "tithi": 1,
+    "tithiName": "Prathama",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (16/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Margashira",
+      "paksha": "krishna",
+      "tithi": 12,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "U12"
+  },
+  {
+    "name": "Raghottama Tirtha",
+    "sourceDate": "2025-12-31",
+    "masa": "Pushya",
+    "paksha": "shukla",
+    "tithi": 12,
+    "tithiName": "Dwadashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyakama Tirtha",
+    "sourceDate": "2026-01-09",
+    "masa": "Pushya",
+    "paksha": "krishna",
+    "tithi": 6,
+    "tithiName": "Shashti",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Narahari Tirtha",
+    "sourceDate": "2026-01-10",
+    "masa": "Pushya",
+    "paksha": "krishna",
+    "tithi": 7,
+    "tithiName": "Saptami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Vidyadhisha Tirtha",
+    "sourceDate": "2026-01-17",
+    "masa": "Pushya",
+    "paksha": "krishna",
+    "tithi": 14,
+    "tithiName": "Chaturdashi",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Purandara Dasa",
+    "sourceDate": "2026-01-18",
+    "masa": "Pushya",
+    "paksha": "krishna",
+    "tithi": 15,
+    "tithiName": "Amavasya",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Madhwacharya (Madhwa Navami)",
+    "sourceDate": "2026-01-27",
+    "masa": "Magha",
+    "paksha": "shukla",
+    "tithi": 9,
+    "tithiName": "Navami",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  },
+  {
+    "name": "Satyabodha Tirtha",
+    "sourceDate": "2026-02-19",
+    "masa": "Phalguna",
+    "paksha": "krishna",
+    "tithi": 1,
+    "tithiName": "Prathama",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (16/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Phalguna",
+      "paksha": "shukla",
+      "tithi": 2,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "U25"
+  },
+  {
+    "name": "Vadiraja Tirtha",
+    "sourceDate": "2026-02-20",
+    "masa": "Phalguna",
+    "paksha": "krishna",
+    "tithi": 3,
+    "tithiName": "Tritiya",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (16/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Phalguna",
+      "paksha": "shukla",
+      "tithi": 3,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "Sode"
+  },
+  {
+    "name": "Vyasaraja Tirtha",
+    "sourceDate": "2026-02-21",
+    "masa": "Phalguna",
+    "paksha": "krishna",
+    "tithi": 4,
+    "tithiName": "Chaturthi",
+    "adhikaMasa": false,
+    "confidence": "uttaradi-math-published (15/16 city editions 2025-26 & 2026-27, Surya Siddhanta)",
+    "correctedFrom": {
+      "masa": "Phalguna",
+      "paksha": "shukla",
+      "tithi": 4,
+      "confidence": "derived-from-published-gregorian"
+    },
+    "lineage": "V12"
+  },
+  {
+    "name": "Satyavrata Tirtha",
+    "sourceDate": "2026-02-23",
+    "masa": "Phalguna",
+    "paksha": "shukla",
+    "tithi": 6,
+    "tithiName": "Shashti",
+    "adhikaMasa": false,
+    "confidence": "derived-from-published-gregorian"
+  }
+]

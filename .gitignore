@@ -1,0 +1,18 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.env
+
+# Private user data - never commit (profiles, accounts, sessions).
+apps/kaalachakra-api/data/
+*.db
+*.db-wal
+*.db-shm
+INITIAL_ADMIN_PASSWORD
+secret.key
+
+# Generated gazetteer (147 MB, over GitHub's limit) and its GeoNames inputs.
+# Rebuild with `pnpm --filter @kaalachakra/places build:data`.
+packages/places/data/

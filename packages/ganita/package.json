@@ -1,0 +1,21 @@
+{
+  "name": "@kaalachakra/ganita",
+  "version": "0.1.0",
+  "description": "Pure calculation engine: panchanga, kaala windows, positions. No HTTP, no I/O.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "build": "echo \"no build step\""
+  },
+  "dependencies": {
+    "@kaalachakra/swisseph": "workspace:*"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@kaalachakra/places",
+  "version": "0.1.0",
+  "description": "Offline gazetteer: place search, coordinates, elevation and IANA timezone. No network.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "scripts": {
+    "build:data": "node scripts/build-gazetteer.mjs",
+    "test": "node --test test/",
+    "build": "echo \"no build step\""
+  },
+  "engines": { "node": ">=22" }
+}

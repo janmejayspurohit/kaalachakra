@@ -1,0 +1,2053 @@
+{
+ "source": "Sri Uttaradi Math panchanga, English city editions 2025-26 and 2026-27 (cdn.umath.in/panchanga-*/pdf/<city>*.pdf), Sarvathra / Bhagavatha Vaishnava Ekadashi entries, parsed 2026-09-23",
+ "editions": {
+  "chicago": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-23",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-07",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-20",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-04",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-10-16",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-13",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-28",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-12",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-14",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-28",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-12",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-08",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-04",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-01",
+     "name": "Shat\u2013thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-03-03",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  },
+  "denver": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-23",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-07",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-20",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-04",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-02",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-16",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-30",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-13",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-28",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-12",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-14",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-28",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-12",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-08",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-04",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-19",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-02",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-01",
+     "name": "Shat\u2013thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-03-03",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  },
+  "dubai": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-24",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-08",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-21",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-05",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-17",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-14",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-29",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-13",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-15",
+     "name": "Papamochani",
+     "kind": "Vaishnava"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-29",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-13",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-27",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-09",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-05",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-02",
+     "name": "Shat\u2013thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-04",
+     "name": "Vijaya",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  },
+  "london": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-24",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-08",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-21",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-05",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-17",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-14",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-29",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-13",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-14",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-29",
+     "name": "Kamada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-13",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-27",
+     "name": "Padmini",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-09",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Pashankusha",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-11-05",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-02",
+     "name": "Shat \u2013thila",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-03",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  },
+  "los_angeles": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-23",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-07",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-20",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-04",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-02",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-16",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-30",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-13",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-28",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-12",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-14",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-28",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-12",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-08",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-04",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-19",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-02",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-01",
+     "name": "Shat\u2013thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-16",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-03",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  },
+  "melbourne": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-24",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-08",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-07",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-22",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-21",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-05",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-04",
+     "name": "Parivarthini",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-09-18",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-17",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-02",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-16",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-31",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-14",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-29",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-13",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-28",
+     "name": "Aamalaki",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-03-15",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-29",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-13",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-27",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-11",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-09",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-05",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-21",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-05",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-19",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-02",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-04",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-19",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-03",
+     "name": "Papamochani",
+     "kind": "Vaishnava"
+    }
+   ]
+  },
+  "sydney": {
+   "2025-2026": [
+    {
+     "date": "2025-04-09",
+     "name": "Kamada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-04-24",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-08",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-07",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-22",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-21",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-05",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-04",
+     "name": "Parivarthini",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-09-18",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-17",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-02",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-16",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-31",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-14",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-29",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-13",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-28",
+     "name": "Aamalaki",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-03-15",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-29",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-13",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-27",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-11",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-09",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-05",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-21",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-05",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-01-19",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-02",
+     "name": "Shat-thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-04",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-19",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-03",
+     "name": "Papamochani",
+     "kind": "Vaishnava"
+    }
+   ]
+  },
+  "washington": {
+   "2025-2026": [
+    {
+     "date": "2025-04-08",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-04-23",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-07",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-05-23",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-06",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-06-21",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-06",
+     "name": "Shayani",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-07-20",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-04",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-08-19",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-03",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-09-17",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-10-03",
+     "name": "Pashankusha",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-10-16",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-01",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-11-15",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-01",
+     "name": "Mokshada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2025-12-15",
+     "name": "Saphala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2025-12-30",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-01-14",
+     "name": "Shat-thila",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2026-01-28",
+     "name": "Jaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-12",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-02-27",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-03-14",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ],
+   "2026-2027": [
+    {
+     "date": "2026-03-28",
+     "name": "Kamada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Varuthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "Mohini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-12",
+     "name": "Apara",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Padmini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Parama",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "Nirjala",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Yogini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Shayani, Prathama Ekadashi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-08",
+     "name": "Kamika",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-08-23",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Ajaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Parivarthini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Indira",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Pashankusha",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-04",
+     "name": "Ramaa",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Prabhodini",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Uthpatthi",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2026-12-20",
+     "name": "Mokshada",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-01-03",
+     "name": "Saphala",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-01-18",
+     "name": "Puthrada",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-01",
+     "name": "Shat\u2013thila",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-02-17",
+     "name": "Jaya",
+     "kind": "Vaishnava"
+    },
+    {
+     "date": "2027-03-03",
+     "name": "Vijaya",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-03-18",
+     "name": "Aamalaki",
+     "kind": "Sarvathra"
+    },
+    {
+     "date": "2027-04-02",
+     "name": "Papamochani",
+     "kind": "Sarvathra"
+    }
+   ]
+  }
+ }
+}
