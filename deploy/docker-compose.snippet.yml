@@ -1,31 +1,64 @@
-# Merge these two services into ~/docker/docker-compose.yml on jserver1.
-# Build contexts are relative to ~/docker; the code lives in ~/code/kaalachakra.
+# The two services exactly as they run on jserver1, inside ~/docker/docker-compose.yml.
+# Paste them into that file's `services:` block. proxy-net is defined in that same
+# file, so no `networks:` section is needed here. The web healthcheck probes
+# 127.0.0.1: inside the container `localhost` resolves to ::1 and nginx listens on IPv4.
 services:
+  # ---------------------------------------------------------------------------
+  # Kaalachakra — Madhwa panchanga & jyotisha. App-level auth (accounts, TOTP).
+  # Domain: astro.janmejay.info  (NPM -> kaalachakra-web:80; nginx there
+  # proxies /api/ to kaalachakra-api:5174). Code: /home/janmejay/code/kaalachakra
+  # (deploy/). Data: /data/apps/kaalachakra (db, secret.key; gazetteer ro).
+  # First start writes the admin's generated password to
+  # /data/apps/kaalachakra/data/INITIAL_ADMIN_PASSWORD (deleted on first change).
+  # Admin locked out: docker exec -it kaalachakra-api node apps/kaalachakra-api/src/cli.js reset-admin
+  # ---------------------------------------------------------------------------
   kaalachakra-api:
     build:
-      context: ../code/kaalachakra
+      context: /home/janmejay/code/kaalachakra
       dockerfile: deploy/Dockerfile.api
     container_name: kaalachakra-api
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
     environment:
       NODE_ENV: production
-      KAALACHAKRA_ALLOWED_ORIGINS: https://astro.janmejay.info
+      KAALACHAKRA_ALLOWED_ORIGINS: "https://astro.janmejay.info"
     volumes:
       - /data/apps/kaalachakra/data:/data
       - /data/apps/kaalachakra/places/gazetteer.db:/app/packages/places/data/gazetteer.db:ro
-    networks: [proxy-net]
+    networks:
+      - proxy-net
     mem_limit: 512m
+    cpus: "1.0"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   kaalachakra-web:
     build:
-      context: ../code/kaalachakra
+      context: /home/janmejay/code/kaalachakra
       dockerfile: deploy/Dockerfile.web
     container_name: kaalachakra-web
     restart: unless-stopped
-    depends_on: [kaalachakra-api]
-    networks: [proxy-net]
-    mem_limit: 128m
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      kaalachakra-api:
+        condition: service_healthy
+    networks:
+      - proxy-net
+    mem_limit: 64m
+    cpus: "0.3"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
 
-networks:
-  proxy-net:
-    external: true
