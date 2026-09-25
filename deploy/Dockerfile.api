@@ -16,8 +16,9 @@ COPY apps/kaalachakra-web/package.json apps/kaalachakra-web/
 COPY packages/swisseph packages/swisseph
 RUN pnpm install --frozen-lockfile
 COPY . .
+# Fail the build here, not at runtime, if the native addon did not compile.
 RUN pnpm install --frozen-lockfile --offline \
- && node -e "import('@kaalachakra/swisseph').then(()=>console.log('swisseph addon loads'))" --input-type=module
+ && node --input-type=module -e "import('/app/packages/swisseph/lib/index.js').then((m)=>console.log('swisseph addon loads:', Object.keys(m).length, 'exports'))"
 
 FROM node:24-bookworm-slim
 WORKDIR /app
