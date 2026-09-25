@@ -33,6 +33,7 @@ import {
   panchangaQuerySchema, profileBodySchema, matchBodySchema,
   placeSearchSchema, dashaQuerySchema, ganitaEnum, muhurtaQuerySchema, ganitaQuerySchema,
 } from './schemas.js';
+import { registerAuth } from './auth/plugin.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 
@@ -73,7 +74,7 @@ const DB_PATH = process.env.KAALACHAKRA_DB ?? join(here, '..', 'data', 'kaalacha
 const PORT = Number(process.env.PORT ?? 5174);
 const HOST = process.env.HOST ?? '127.0.0.1';
 
-export async function build({ dbPath = DB_PATH, logger = true } = {}) {
+export async function build({ dbPath = DB_PATH, logger = true, adminInitialPassword } = {}) {
   const app = Fastify({
     logger,
     // `removeAdditional: false` keeps unknown query params in `req.query`
@@ -119,19 +120,31 @@ export async function build({ dbPath = DB_PATH, logger = true } = {}) {
     app.log.warn(`gazetteer unavailable: ${e.message}`);
   }
 
-  await app.register(cors, { origin: true });
-  await app.register(swagger, {
-    openapi: {
-      info: {
-        title: 'Kaalachakra API',
-        description:
-          'Madhwa / South-Indian Kannada panchanga and jyotisha engine. ' +
-          'Fully offline: vendored Swiss Ephemeris, local gazetteer, local SQLite.',
-        version: '0.1.0',
-      },
-    },
+  // Register auth plugin before any routes
+  const dataDir = dbPath === ':memory:' ? await import('node:fs').then(m => m.mkdtempSync('/tmp/kaalachakra-')) : dirname(resolve(dbPath));
+  await registerAuth(app, { db, dataDir, adminInitialPassword });
+
+  // CORS settings
+  await app.register(cors, {
+    origin: process.env.NODE_ENV === 'production' ? false : true,
+    credentials: true
   });
-  await app.register(swaggerUi, { routePrefix: '/docs' });
+  
+  // Register swagger and swagger-ui ONLY when not in production
+  if (process.env.NODE_ENV !== 'production') {
+    await app.register(swagger, {
+      openapi: {
+        info: {
+          title: 'Kaalachakra API',
+          description:
+            'Madhwa / South-Indian Kannada panchanga and jyotisha engine. ' +
+            'Fully offline: vendored Swiss Ephemeris, local gazetteer, local SQLite.',
+          version: '0.1.0',
+        },
+      },
+    });
+    await app.register(swaggerUi, { routePrefix: '/docs' });
+  }
 
   // Janma nakshatra and rashi are derived on read in the requested ganita
   // (Surya Siddhanta by default - the Uttaradi Math reckoning).
@@ -147,11 +160,7 @@ export async function build({ dbPath = DB_PATH, logger = true } = {}) {
   /* ------------------------------------------------------------- health */
 
   app.get('/health', async () => ({
-    ok: true,
-    profiles: countProfiles(db),
-    gazetteer: gazetteer ? gazetteer.stats() : { error: gazetteerError },
-    ayanamsas: AYANAMSA_NAMES,
-    languages: LANGUAGES,
+    ok: true
   }));
 
   /* ---------------------------------------------------------- panchanga */

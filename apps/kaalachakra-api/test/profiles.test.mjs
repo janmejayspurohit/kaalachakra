@@ -20,8 +20,29 @@ import { join } from 'node:path';
 import { build } from '../src/server.js';
 
 const dir = mkdtempSync(join(tmpdir(), 'kaalachakra-test-'));
-const app = await build({ dbPath: join(dir, 'test.db'), logger: false });
+const app = await build({ dbPath: join(dir, 'test.db'), logger: false, adminInitialPassword: 'Initial-Admin-Pass-1' });
 await app.ready();
+
+// Every route now needs a signed-in user: sign in once (changing the generated
+// password, as a first sign-in must) and send the session cookie on every
+// request below, exactly as the browser does.
+async function signIn() {
+  const login = await app.inject({
+    method: 'POST', url: '/auth/login',
+    headers: { 'content-type': 'application/json' },
+    payload: { email: 'admin@janmejay.info', password: 'Initial-Admin-Pass-1' },
+  });
+  const cookie = /^kc_session=[^;]*/.exec([].concat(login.headers['set-cookie'])[0])[0];
+  const change = await app.inject({
+    method: 'POST', url: '/auth/password',
+    headers: { 'content-type': 'application/json', cookie },
+    payload: { currentPassword: 'Initial-Admin-Pass-1', newPassword: 'Admin-New-Pass-2026' },
+  });
+  if (change.statusCode !== 204) throw new Error(`sign-in setup failed: ${change.statusCode}`);
+  return cookie;
+}
+const cookie = await signIn();
+const inject = (opts) => app.inject({ ...opts, headers: { ...(opts.headers ?? {}), cookie } });
 
 test.after(async () => {
   await app.close();
@@ -39,7 +60,7 @@ const SAMPLE = {
 };
 
 async function create(overrides = {}) {
-  const res = await app.inject({
+  const res = await inject({
     method: 'POST', url: '/profiles',
     headers: { 'content-type': 'application/json' },
     payload: { ...SAMPLE, ...overrides },
@@ -52,14 +73,14 @@ test('a profile round-trips through create, read and delete', async () => {
   const made = await create({ name: 'Round Trip' });
   assert.ok(made.id, 'a created profile must have an id');
 
-  const got = await app.inject({ method: 'GET', url: `/profiles/${made.id}` });
+  const got = await inject({ method: 'GET', url: `/profiles/${made.id}` });
   assert.equal(got.statusCode, 200);
   assert.equal(got.json().name ?? got.json().profile?.name, 'Round Trip');
 
-  const del = await app.inject({ method: 'DELETE', url: `/profiles/${made.id}` });
+  const del = await inject({ method: 'DELETE', url: `/profiles/${made.id}` });
   assert.equal(del.statusCode, 204);
 
-  const after = await app.inject({ method: 'GET', url: `/profiles/${made.id}` });
+  const after = await inject({ method: 'GET', url: `/profiles/${made.id}` });
   assert.equal(after.statusCode, 404, 'the profile must actually be gone');
 });
 
@@ -67,14 +88,14 @@ test('DELETE succeeds with the JSON content-type the browser sends', async () =>
   // The regression. A bodyless DELETE carrying `content-type: application/json`
   // used to be answered with 500 "internal error".
   const made = await create({ name: 'Header Case' });
-  const res = await app.inject({
+  const res = await inject({
     method: 'DELETE',
     url: `/profiles/${made.id}`,
     headers: { 'content-type': 'application/json' },
   });
   assert.equal(res.statusCode, 204, `expected 204, got ${res.statusCode}: ${res.body}`);
 
-  const list = await app.inject({ method: 'GET', url: '/profiles' });
+  const list = await inject({ method: 'GET', url: '/profiles' });
   assert.ok(
     !list.json().profiles.some((p) => p.id === made.id),
     'the deleted profile must not come back in the list'
@@ -82,7 +103,7 @@ test('DELETE succeeds with the JSON content-type the browser sends', async () =>
 });
 
 test('deleting something that is not there is a 404, not a 500', async () => {
-  const res = await app.inject({
+  const res = await inject({
     method: 'DELETE',
     url: '/profiles/00000000-0000-0000-0000-000000000000',
     headers: { 'content-type': 'application/json' },
@@ -94,7 +115,7 @@ test('a client error is reported as a client error', async () => {
   // The error handler used to flatten every non-validation error to 500,
   // which is what turned the delete bug into "internal error" and sent the
   // search for it to the wrong side of the wire.
-  const malformed = await app.inject({
+  const malformed = await inject({
     method: 'POST', url: '/profiles',
     headers: { 'content-type': 'application/json' },
     payload: '{ not json',
@@ -102,7 +123,7 @@ test('a client error is reported as a client error', async () => {
   assert.equal(malformed.statusCode, 400, malformed.body);
   assert.notEqual(malformed.json().error, 'internal error');
 
-  const invalid = await app.inject({
+  const invalid = await inject({
     method: 'POST', url: '/profiles',
     headers: { 'content-type': 'application/json' },
     payload: { ...SAMPLE, gender: 'not-a-gender' },
@@ -111,7 +132,7 @@ test('a client error is reported as a client error', async () => {
 });
 
 test('the year bounds are the EPHEMERIS range, not the working range', async () => {
-  const at = (year) => app.inject({
+  const at = (year) => inject({
     method: 'GET',
     url: `/panchanga?year=${year}&month=1&day=1&latitude=12.97194&longitude=77.59369`,
   });
@@ -131,7 +152,7 @@ test('the year bounds are the EPHEMERIS range, not the working range', async () 
 
 test('panchanga is computed for the place it is asked for', async () => {
   // The other bug this session: four routes ignored the requested place.
-  const at = (lat, lon) => app.inject({
+  const at = (lat, lon) => inject({
     method: 'GET',
     url: `/panchanga?year=2026&month=9&day=23&latitude=${lat}&longitude=${lon}&timezone=Asia/Kolkata`,
   });
