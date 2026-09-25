@@ -24,6 +24,12 @@
         "vendor/swemplan.c", "vendor/sweph.c", "vendor/swephlib.c"
       ],
       "include_dirs": ["vendor"],
+      # -std=c99 is strict ISO, and on Linux glibc then hides POSIX types and
+      # functions the vendored swejpl.c uses (off_t, fseeko, ftello); macOS
+      # headers expose them regardless, so only Linux failed. _DEFAULT_SOURCE
+      # re-enables them without switching to -std=gnu99, whose default
+      # floating-point contraction could change results in the last digits.
+      "defines": ["_DEFAULT_SOURCE"],
       "cflags": [
         "-O2", "-fPIC",
         "-Wno-unused-but-set-variable", "-Wno-unused-but-set-parameter",
